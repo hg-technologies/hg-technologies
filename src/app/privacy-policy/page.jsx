@@ -29,18 +29,17 @@ export default function PrivacyPolicy() {
       {/* Privacy Policy Content */}
       <section id="contact" className="contact section contactFromBlog pb-0">
         <div className="container section-title aos-init aos-animate" data-aos="fade-up">
-          <h2>Privacy Policy</h2>          
-          <p>Your Data, Our Responsibility</p>
+          <h2>Privacy Policy</h2>
 
           <div className="normalText">
-            <p> The privacy policy is effective September 15, 2025.<br />
-               Last updated September 15, 2025.
+            <p> The privacy policy is effective September 22, 2025.<br />
+               Last updated September 22, 2025.
 
                  </p>
 
 <p>
               Welcome to our website <a href="https://hgtechnologies.in/" target="_blank" rel="noopener noreferrer">
-              www.hgtechnologies.in</a>owned by H.G. Technology & Services Private Limited, having its registered office at 
+              www.hgtechnologies.in </a>owned by H.G. Technology & Services Private Limited, having its registered office at 
               4th Floor, Plot no SB-56, Pavilion/Malabar Building, Bapu Nagar , Tonk Road, Statue of Arjun SMS Stadium, Jaipur, 
               Rajasthan, 302015 (hereinafter referred to as “H.G. Technologies“, “we” or “us” or “our”). 
               We are committed to respecting the privacy of every person who shares information with us. <br />
@@ -48,8 +47,8 @@ export default function PrivacyPolicy() {
 
             
               This Privacy Policy (“Privacy Policy”) provides you (“you” or “user” or “your”) some important information in 
-              relation to your data and privacy. You are required to read this Privacy Policy carefully since your use of 
-               <a href="https://hgtechnologies.in/" target="_blank" rel="noopener noreferrer">www.hgtechnologies.in</a> 
+              relation to your data and privacy. You are required to read this Privacy Policy carefully since your use of  
+               <a href="https://hgtechnologies.in/" target="_blank" rel="noopener noreferrer"> www.hgtechnologies.in </a> 
                (hereinafter referred to as “Website” or “Site”) for any information or services
                 (hereinafter referred to as “services”) implies knowledge, understanding and acceptance of all terms of 
                 this Privacy Policy. In this Privacy Policy, we set out the types of information that we may collect, the
