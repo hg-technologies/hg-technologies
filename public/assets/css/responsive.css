@@ -1,0 +1,99 @@
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.aboutUsHero {
+	min-height: 30vh !important;
+}
+}
+
+
+@media only screen and (max-width:991px) {
+	.hero h2 {font-size: 48px;}
+	.hero p {font-size: 20px;}
+	.hero .icon-box h3 {font-size: 16px;line-height: 20px;}
+	.business-info-content h3 {font-size: 34px;}
+	.hightlight-info ul li p {	font-size: 36px;}	
+	.circle-list li {margin: 0 20px;max-width: 310px;height: 310px;font-size: 14px;padding: 40px 30px;border: solid 14px #dab068;}
+	 .circle-list li h6 {font-weight: 700;font-size: 18px;}
+	 .info-item{margin-bottom: 40px;}
+	 .navmenu ul li.dropdown ul li a {font-size: 14px !important;padding: 8px 25px !important;background: #1a222d;}
+	 .why-join {width: 80%;}
+	 .currentOpeningsBlog ul li div{ width: 70%;}
+
+}
+
+@media only screen and (max-width: 767px) {		
+	.header .logo img {max-height: 46px !important;}
+	.logohginfra{ display: none;}
+	.mobileViewBtn{ display: block;}
+	.webViewBtn{display: none;}
+	.detailsBlog {padding: 20px 20px;}
+	.hero h2 {font-size: 32px;}
+	.hero p {font-size: 16px;}
+	.aboutus-section {	padding: 42px 15px;}	
+	.missionBlogBg {padding-top: 50px !important;}
+	.visionImgView {height: 220px;}
+	.feature-hl-list li {width: 100% !important; margin: 0 0 6px !important;}
+	.business-info-cont {padding: 50px 15px;}
+	.business-info-content h3 {font-size: 22px;}
+	.business-info-content ul {margin-left: 38px;margin-top: 44px;}
+	.feature-hl-list li h2 {font-size: 30px;}
+	.feature-hl-list {margin: 20px 0 0 40px;}
+	.testimonials {	padding: 40px 15px;}
+	.footer .footer-top {padding: 0 15px;}
+	.slidecontent h2 {font-size: 42px;font-weight: 500;margin: 36px 0;color: #fff;padding: 20px;}
+	.visionMobileM{ margin-bottom: 40px;}
+	.contactDetails {padding: 15px;min-height: 140px;}
+	.contactUSBlog {padding: 15px;margin-bottom: 15px;}
+	.why-join {width: 100%;background: rgba(0,0,0,0.6);padding: 20px;margin: 0;}
+	#why-join {background-size: cover;}
+	.header .btn-getstarted, .header .btn-getstarted:focus {font-size: 13px;}
+	.header .btn-getstarted {padding: 8px;}
+	.titleManSlide {font-size:28px !important;}
+	.section-title p {font-size: 24px; line-height: 30px;}
+	.circle-list {margin: 30px 0 0 0;padding: 0;}
+	.circle-list li {margin-bottom: 30px !important;}
+	.whatweprovide-sect{ padding-bottom: 30px !important;}
+	.our-stragy {padding: 50px 0;}
+	.mission-vision-sect {padding: 80px 15px;}
+	.aboutUsHero {min-height: 30vh !important;padding: 80px 0 20px 0;}
+	.info-item{margin-bottom: 40px;}
+	.contactInfo {padding-bottom: 0;}
+	.full-width-pop .modal-dialog h4 {font-size: 22px;}
+	.form-card {padding: 20px;}
+	.why-join h3 {font-size: 26px;}
+	.currentOpeningsBlog ul li {display: inline-block;}
+	.currentOpeningsBlog ul li a.btn{margin-top: 15px; text-align: center;}
+	.mission-vision-sect h3 {font-size: 26px;}
+	.reviewsBox {height: auto;margin-bottom: 30px;}
+	.stragy-list {display: inline-block;margin: 50px 0 0;padding-left: 0;}
+	.title-heading {font-size: 28px;font-weight: 600;}
+	.whatweprovide-sect {padding: 50px 0;}
+	.our-stragy .mission-vision-sect {padding: 50px 15px 10px 15px;}
+	.section-title h2 {font-size: 11px;}
+	.missionBlogBg .about-top-item div.title {font-size: 22px;}
+	.about-top-item p {font-size: 16px;}
+	.about-top-content {padding: 15px 15px;}
+	.aiMobile{ padding-top:0px !important;}
+	.aiExpertConsultantsBg {padding: 50px 10px;}
+	.aiConsultants h3 {color: #fff;font-size: 26px;}
+	.useTechnologies .ser-card-wt {padding: 20px; margin-bottom: 30px; text-align: center;}
+	.develop-section {padding:50px 10px;}
+	.feature-card-sect {padding: 50px 10px;}
+	section, .section {padding-left: 10px;padding-right: 10px;}
+	.ser-card-wt {text-align: center;}
+	.ser-card-wt {padding: 15px; min-height: auto; text-align: center;}
+	.section-title h2::after {width: 60px;}
+	.logo.me-auto {
+    margin-left: 2px !important;
+}
+
+
+
+}
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+}

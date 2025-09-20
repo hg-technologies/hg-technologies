@@ -1,0 +1,30 @@
+/* app/globals.css */
+/* Import custom CSS files first */
+@import url('../../public/assets/css/main.css');
+@import url('../../public/assets/css/style.css');
+@import url('../../public/assets/css/animate.css');
+@import url('../../public/assets/css/topslider.css');
+@import url('../../public/assets/css/responsive.css');
+
+/* Then import vendor CSS files */
+@import url('../../public/assets/vendor/glightbox/css/glightbox.css');
+@import url('../../public/assets/vendor/glightbox/css/glightbox.min.css');
+@import url('../../public/assets/vendor/swiper/swiper-bundle.min.css');
+
+/* Import Bootstrap LAST to ensure its styles take precedence */
+@import url('../../public/assets/vendor/bootstrap/css/bootstrap.min.css');
+@import url('../../public/assets/vendor/bootstrap-icons/bootstrap-icons.css');
+@import url('../../public/assets/vendor/bootstrap/css/bootstrap-grid.min.css');
+@import url('../../public/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css');
+@import url('../../public/assets/vendor/bootstrap/css/bootstrap-utilities.min.css');
+@import url('../../public/assets/vendor/bootstrap-icons/bootstrap-icons.min.css');
+
+
+
+.emailSub{
+ color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.footer .footer-newsletter .newsletter-form {
+	margin-top: 20px;
+}

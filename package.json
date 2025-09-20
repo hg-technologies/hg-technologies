@@ -1,0 +1,25 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "devv1": "next dev 192.168.20.153 -p 3003",
+    "dev": "cross-env HOST=0.0.0.0 PORT=3003 next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
+    "swiper": "^12.0.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "cross-env": "^10.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3"
+  }
+}

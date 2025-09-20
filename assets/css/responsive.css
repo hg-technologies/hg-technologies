@@ -1,0 +1,50 @@
+
+@media only screen and (max-width: 1366px) {
+	.hero h2 {font-size: 48px;}
+	.hero p {font-size: 20px;}
+	.hero .icon-box h3 {font-size: 16px;line-height: 20px;}
+	.business-info-content h3 {font-size: 34px;}
+	.hightlight-info ul li p {	font-size: 36px;}
+	.circle-list li {margin: 0 20px;max-width: 280px;height: 280px;font-size: 14px;padding: 20px 30px; border: solid 14px #dab068;}
+	.circle-list li h6 {font-weight: 700;font-size: 18px;}
+}
+
+
+@media only screen and (max-width: 767px) {		
+	.header .logo img {max-height: 46px !important;}
+	.logohginfra{ display: none;}
+	.mobileViewBtn{ display: block;}
+	.webViewBtn{display: none;}
+	.detailsBlog {padding: 20px 20px;}
+
+	.hero h2 {font-size: 32px;}
+	.hero p {font-size: 16px;}
+	.aboutus-section {	padding: 42px 15px;}
+	
+	.missionBlogBg {padding-top: 50px !important;}
+	.visionImgView {height: 220px;}
+
+	.feature-hl-list li {width: 100% !important; margin: 0 0 6px !important;}
+	.business-info-cont {padding: 50px 15px;}
+	.business-info-content h3 {font-size: 22px;}
+	.business-info-content ul {margin-left: 38px;margin-top: 44px;}
+	.feature-hl-list li h2 {font-size: 30px;}
+	.feature-hl-list {margin: 20px 0 0 40px;}
+	.testimonials {	padding: 40px 15px;}
+	.footer .footer-top {padding: 0 15px;}
+	.slidecontent h2 {
+		font-size: 42px;
+		font-weight: 500;
+		margin: 36px 0;
+		color: #fff;
+		padding: 20px;
+    }
+
+	.visionMobileM{ margin-bottom: 40px;}
+
+  }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	
+  }
