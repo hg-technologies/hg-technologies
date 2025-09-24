@@ -7,7 +7,7 @@ export const metadata = {
       { url: '/favicon.png', sizes: 'any' }
     ],
     apple: [
-      { url: '/apple-touch-icon.png' },
+      { url: '/favicon.png' },
     ],
   },
 };
