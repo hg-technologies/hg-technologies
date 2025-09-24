@@ -274,9 +274,7 @@ export default function ContactUs() {
                         </div>
 
                         <div className="col-md-12 text-end">
-                          {isSubmitting && <div className="loading">Loading</div>}
-
-                          <button className='btn btn-primary' type="submit" disabled={isSubmitting}>
+                          <button className='btn btn-primary' type="submit" disabled={isSubmitting} style={{ minWidth: '150px' }}>
                             {isSubmitting ? 'Sending...' : 'Send Message'}
                           </button>
                         </div>

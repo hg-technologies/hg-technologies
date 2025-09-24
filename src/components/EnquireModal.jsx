@@ -274,6 +274,7 @@ export default function EnquireModal({ isOpen, onClose }) {
                         type="submit" 
                         className="btn btn-primary"
                         disabled={isSubmitting}
+                        style={{ minWidth: '100px' }}
                       >
                         {isSubmitting ? 'Sending...' : 'Send'}
                       </button>
