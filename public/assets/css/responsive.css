@@ -1,24 +1,22 @@
-
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	.aboutUsHero {
-	min-height: 30vh !important;
-}
+
+	.aboutUsHero {min-height: 30vh !important;}
 }
 
 
 @media only screen and (max-width:991px) {
-	.hero h2 {font-size: 48px;}
-	.hero p {font-size: 20px;}
-	.hero .icon-box h3 {font-size: 16px;line-height: 20px;}
-	.business-info-content h3 {font-size: 34px;}
-	.hightlight-info ul li p {	font-size: 36px;}	
-	.circle-list li {margin: 0 20px;max-width: 310px;height: 310px;font-size: 14px;padding: 40px 30px;border: solid 14px #dab068;}
+	 .hero h2 {font-size: 48px;}
+	 .hero p {font-size: 20px;}
+	 .hero .icon-box h3 {font-size: 16px;line-height: 20px;}
+	 .business-info-content h3 {font-size: 34px;}
+	 .hightlight-info ul li p {	font-size: 36px;}	
+	 .circle-list li {margin: 0 20px;max-width: 310px;height: 310px;font-size: 14px;padding: 40px 30px;border: solid 14px #dab068;}
 	 .circle-list li h6 {font-weight: 700;font-size: 18px;}
 	 .info-item{margin-bottom: 40px;}
 	 .navmenu ul li.dropdown ul li a {font-size: 14px !important;padding: 8px 25px !important;background: #1a222d;}
 	 .why-join {width: 80%;}
-	 .currentOpeningsBlog ul li div{ width: 70%;}
+	 .currentOpeningsBlog ul li div{ width: 100%;}
+	.logo.me-auto {margin-left: 2px !important;}
 
 }
 
@@ -77,23 +75,23 @@
 	.aiMobile{ padding-top:0px !important;}
 	.aiExpertConsultantsBg {padding: 50px 10px;}
 	.aiConsultants h3 {color: #fff;font-size: 26px;}
-	.useTechnologies .ser-card-wt {padding: 20px; margin-bottom: 30px; text-align: center;}
+	.useTechnologies .ser-card-wt {padding: 20px; margin-bottom: 30px; text-align: center; min-height: auto !important;}
 	.develop-section {padding:50px 10px;}
 	.feature-card-sect {padding: 50px 10px;}
 	section, .section {padding-left: 10px;padding-right: 10px;}
 	.ser-card-wt {text-align: center;}
 	.ser-card-wt {padding: 15px; min-height: auto; text-align: center;}
 	.section-title h2::after {width: 60px;}
-	.logo.me-auto {
-    margin-left: 2px !important;
-}
-
-
+	.logo.me-auto {margin-left: 2px !important;}
+	.normalText p{ font-size: 16px !important; line-height: 22px !important;;}
 
 }
-
 
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-
+	.about-top-content { min-height: auto;}
+	.abDetails p{text-align: start;}
+	.normalText p{text-align: start;}
+	.normalText ul li{text-align: start;}
+ 
 }

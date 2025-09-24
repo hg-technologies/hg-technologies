@@ -228,7 +228,7 @@ export default function MobileAppDevelopment() {
                       height={70}
                     />
                   </div>
-                  <a href="" className="stretched-link">
+                  <a className="stretched-link">
                     <h3>{service.title}</h3>
                   </a>
                   <p>{service.description}</p>

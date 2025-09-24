@@ -29,30 +29,47 @@ export default function EnquireModal({ isOpen, onClose }) {
     }
   }, [isOpen]);
 
-  // Handle escape key press and body scroll
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.keyCode === 27) onClose();
     };
-    
+
+    const handlePopState = () => {
+      onClose();
+    };
+
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
+      window.history.pushState({ modalOpen: true }, ''); // Push new state
+      window.addEventListener('popstate', handlePopState); // Listen for back
+
       document.body.classList.add('modal-open');
     }
-    
+
     return () => {
       document.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('popstate', handlePopState); // Cleanup
       document.body.classList.remove('modal-open');
     };
   }, [isOpen, onClose]);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
+
+    if (id === 'phone') {
+      // Allow only digits, spaces, +, -, (, ) and limit digits to 10
+      const digitsOnly = value.replace(/\D/g, '');
+
+      if (digitsOnly.length > 10) {
+        return; // Prevent updating state if more than 10 digits
+      }
+    }
+
     setFormData(prev => ({
       ...prev,
       [id]: value
     }));
-    
+
     // Clear error when user types
     if (errors[id]) {
       setErrors(prev => ({
@@ -110,12 +127,12 @@ export default function EnquireModal({ isOpen, onClose }) {
     try {
       // Prepare payload according to API requirements
       const payload = {
-        type: "contact",
+        type: "inquiry",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
-        subject: formData.company,
-        message: formData.description
+        company: formData.company,
+        description: formData.description
       };
       
       // Send API request
@@ -187,11 +204,11 @@ export default function EnquireModal({ isOpen, onClose }) {
                         <label htmlFor="name" className="form-label">Name *</label>
                         <input 
                           type="text" 
-                          className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                          className={`form-control ${errors.name ? 'is-invalid' : ''} ${isSubmitting ? 'disabled-field' : ''}`}
                           id="name" 
                           value={formData.name}
                           onChange={handleChange}
-                          disabled={isSubmitting}
+                          readOnly={isSubmitting}
                         />
                         {errors.name && <div className="invalid-feedback">{errors.name}</div>}
                       </div>
@@ -201,11 +218,11 @@ export default function EnquireModal({ isOpen, onClose }) {
                         <label htmlFor="email" className="form-label">Email *</label>
                         <input 
                           type="email" 
-                          className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                          className={`form-control ${errors.email ? 'is-invalid' : ''} ${isSubmitting ? 'disabled-field' : ''}`}
                           id="email" 
                           value={formData.email}
                           onChange={handleChange}
-                          disabled={isSubmitting}
+                          readOnly={isSubmitting}
                         />
                         {errors.email && <div className="invalid-feedback">{errors.email}</div>}
                       </div>
@@ -215,11 +232,11 @@ export default function EnquireModal({ isOpen, onClose }) {
                         <label htmlFor="phone" className="form-label">Phone *</label>
                         <input 
                           type="tel" 
-                          className={`form-control ${errors.phone ? 'is-invalid' : ''}`}
+                          className={`form-control ${errors.phone ? 'is-invalid' : ''} ${isSubmitting ? 'disabled-field' : ''}`}
                           id="phone" 
                           value={formData.phone}
                           onChange={handleChange}
-                          disabled={isSubmitting}
+                          readOnly={isSubmitting}
                         />
                         {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
                       </div>
@@ -229,11 +246,11 @@ export default function EnquireModal({ isOpen, onClose }) {
                         <label htmlFor="company" className="form-label">Company *</label>
                         <input 
                           type="text" 
-                          className={`form-control ${errors.company ? 'is-invalid' : ''}`}
+                          className={`form-control ${errors.company ? 'is-invalid' : ''} ${isSubmitting ? 'disabled-field' : ''}`}
                           id="company" 
                           value={formData.company}
                           onChange={handleChange}
-                          disabled={isSubmitting}
+                          readOnly={isSubmitting}
                         />
                         {errors.company && <div className="invalid-feedback">{errors.company}</div>}
                       </div>
@@ -242,12 +259,12 @@ export default function EnquireModal({ isOpen, onClose }) {
                       <div className="form-group">
                         <label htmlFor="description" className="form-label">Description *</label>
                         <textarea 
-                          className={`form-control ${errors.description ? 'is-invalid' : ''}`}
+                          className={`form-control ${errors.description ? 'is-invalid' : ''} ${isSubmitting ? 'disabled-field' : ''}`}
                           id="description"
                           rows="4"
                           value={formData.description}
                           onChange={handleChange}
-                          disabled={isSubmitting}
+                          readOnly={isSubmitting}
                         ></textarea>
                         {errors.description && <div className="invalid-feedback">{errors.description}</div>}
                       </div>

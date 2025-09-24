@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-
+ 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -60,7 +60,7 @@ export default function AIProjectDevelopment() {
       </section>
 
       {/* Section Title */}
-      <section className="contact section contactFromBlog pb-0">
+      <section className="contact section contactFromBlog pb-0 ">
         <div className="container section-title aos-init aos-animate" data-aos="fade-up">
           <h2>AI Project Development</h2>
           <p>Scalable GenAI, data science solutions and trusted worldwide.</p>
@@ -68,7 +68,7 @@ export default function AIProjectDevelopment() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="features section missionBlogBg aiMobile">
+      <section id="features" className="features section missionBlogBg aiMobile aiPage">
         <div className="container" data-aos="fade-up">
           <div className="row about-top-item-wrapper">  
             <div className="col-xl-4 col-md-6 about-top-item-inner">
@@ -156,7 +156,7 @@ export default function AIProjectDevelopment() {
                 <div className="text-start">
                   <h3>Get Custom Solutions from our <span className="goldColor">AI Expert</span> Consultants</h3>
                   <p>
-                    AI is more than technology — it's a catalyst for transformation. 
+                    AI is more than technology, it's a catalyst for transformation. 
                     We develop custom-built AI solutions that integrate seamlessly with your ecosystem, 
                     drive innovation, and create measurable business impact. Ready to explore the possibilities?
                   </p>
@@ -171,13 +171,24 @@ export default function AIProjectDevelopment() {
                 </div>
               </div>
 
-              <div className="col-xl-6 col-md-12">            
-                <video className="banner-bg-video" autoPlay muted loop playsInline preload="auto" width="100%" height="400">
+              <div className="col-xl-6 col-md-12">  
+
+            
+
+              {/* <video className="banner-bg-video" autoPlay muted loop playsInline preload="auto" width="100%" height="400">
                   <source src="/assets/images/ai-consultants.mp4" type="video/webm" />
                   <source src="/assets/images/ai-consultants.mp4" type="video/ogg" />
                   <source src="/assets/images/ai-consultants.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
+
+                   <video className="banner-bg-video" autoPlay muted loop playsInline preload="auto" width="100%" height="400">
+                    <source src="/assets/images/ai-consultants.mp4" type="video/mp4" />
+                     Your browser does not support the video tag.
+                 </video>
+
+              
+
               </div>
             </div>
           </div>

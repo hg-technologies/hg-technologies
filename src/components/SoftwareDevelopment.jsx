@@ -118,7 +118,9 @@ export default function SoftwareDevelopment() {
                     achieving their objectives with unique custom software development solutions. Contact our custom 
                     software developers and leave the rest to us.
                   </p>
-                  <button className="btn btn-primary mb-5" type="submit">Connect Now!</button>
+                    <Link className="btn btn-primary mb-5" href="/contact-us">
+                  Connect Now!
+                </Link>
                 </div>
               </div>
 
@@ -170,7 +172,7 @@ export default function SoftwareDevelopment() {
               {
                 icon: '/assets/images/software_product_dev_icon.svg',
                 title: 'Software Product Development',
-                description: 'Being a full-cycle software product development company, we offers end-to-end product development services. We can do everything from market research to business analysis, software development, and deployment. Give wings to your business dreams while choosing our custom software developers.'
+                description: 'Being a full-Cycle software product development company, we offers end-to-end product development services. We can do everything from market research to business analysis, software development, and deployment. Give wings to your business dreams while choosing our custom software developers.'
               },
               {
                 icon: '/assets/images/support_maintenance_icon.svg',
@@ -188,7 +190,7 @@ export default function SoftwareDevelopment() {
                       height={70}
                     />
                   </div>
-                  <a href="" className="stretched-link">
+                  <a className="stretched-link">
                     <h3>{service.title}</h3>
                   </a>
                   <p>{service.description}</p>

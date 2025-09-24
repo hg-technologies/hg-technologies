@@ -15,8 +15,8 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     phone: '',
+    subject: '',
     message: ''
   });
 
@@ -25,12 +25,12 @@ export default function ContactUs() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+
     // Clear phone error when user starts typing
     if (name === 'phone' && phoneError) {
       setPhoneError('');
     }
-    
+
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -40,27 +40,27 @@ export default function ContactUs() {
   const validatePhone = (phone) => {
     // Remove any non-digit characters
     const cleanedPhone = phone.replace(/\D/g, '');
-    
+
     // Check if it's exactly 10 digits
     if (cleanedPhone.length !== 10) {
       return 'Phone number must be exactly 10 digits';
     }
-    
+
     // Check if it contains only numbers
     if (!/^\d+$/.test(cleanedPhone)) {
       return 'Phone number must contain only numbers';
     }
-    
+
     return '';
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Validate all fields are filled
-      const { name, email, subject, phone, message } = formData;
+      const { name, email, phone, subject, message } = formData;
       if (!name || !email || !subject || !phone || !message) {
         toast.error('Please fill all required fields');
         setIsSubmitting(false);
@@ -101,13 +101,13 @@ export default function ContactUs() {
 
       // Show success message
       toast.success('Your message has been sent successfully!');
-      
+
       // Reset form
       setFormData({
         name: '',
         email: '',
-        subject: '',
         phone: '',
+        subject: '',
         message: ''
       });
     } catch (error) {
@@ -122,25 +122,25 @@ export default function ContactUs() {
     <>
       {/* Hero Section */}
       <section id="hero" className="hero aboutUsHero section dark-background">
-        <Image 
-          src="/assets/images/contact_slider.jpg" 
-          alt="Contact HG Technologies" 
+        <Image
+          src="/assets/images/contact_slider.jpg"
+          alt="Contact HG Technologies"
           fill
           style={{ objectFit: 'cover' }}
           data-aos="fade-in"
-        />          
+        />
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2 className="titleManSlide">Connect, Collaborate, and <span>Innovate </span> with Us</h2>            
-            </div>        
+              <h2 className="titleManSlide">Connect, Collaborate, and <span>Innovate </span> with Us</h2>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Content */}
       <section id="contact" className="contact bgIcons section contactFromBlog pb-0">
-        <div className="container" data-aos="fade-up" data-aos-delay="100">     
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
@@ -149,18 +149,23 @@ export default function ContactUs() {
                     {/* Contact Info */}
                     <div className="contactInfo">
                       <div className="col-lg-12">
-                        <div className="row">            
-                          <div className="col-lg-4">
+                        <div className="row">
+                          <div className="col-lg-5">
                             <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
                               <i className="bi bi-geo-alt flex-shrink-0"></i>
                               <div>
-                                <h3>India Office :</h3>
+                                <h3>Principal Office :</h3>
                                 <p>HG Technologies, 4th Floor, Pavilion, Tonk Road, Opp. SMS Stadium, Bapu Nagar, Jaipur, Rajasthan, 302015.</p>
+
+                                <br />
+                                <h3>Registered Office :</h3>
+                                <p>House No. A-2/3, Tilak Marg, C-Scheme, Jaipur, Rajasthan, India, 302005</p>
+
                               </div>
                             </div>
                           </div>
 
-                          <div className="col-lg-4">   
+                          <div className="col-lg-4">
                             <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                               <i className="bi bi-envelope flex-shrink-0"></i>
                               <div>
@@ -170,7 +175,7 @@ export default function ContactUs() {
                             </div>
                           </div>
 
-                          <div className="col-lg-4">   
+                          <div className="col-lg-3">
                             <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                               <i className="bi bi-telephone flex-shrink-0"></i>
                               <div>
@@ -184,63 +189,67 @@ export default function ContactUs() {
                     </div>
 
                     {/* Contact Form */}
-                    <h2>Quick Inquiry</h2>
-                    <p>Let's get the conversation started. Fill the form below and we'll get in touch as soon as we can.</p>
+                    <h2>Connect with us</h2>
+                    <p>Fill out the form and our experts will contact you within 24 Hrs.</p>
 
-                    <form onSubmit={handleSubmit} className="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <form onSubmit={handleSubmit} className="contact-form" data-aos="fade-up" data-aos-delay="200">
                       <div className="row">
                         <div className="col-md-6">
                           <div className="mb-3">
-                            <label>Name</label>
-                            <input 
-                              type="text" 
-                              name="name" 
-                              className="form-control" 
+                            <label htmlFor="name">Name</label>
+                            <input
+                              id="name"
+                              type="text"
+                              name="name"
+                              className="form-control"
                               value={formData.name}
                               onChange={handleInputChange}
-                              required 
+                              required
                             />
                           </div>
                         </div>
 
                         <div className="col-md-6">
                           <div className="mb-3">
-                            <label>Email</label>
-                            <input 
-                              type="email" 
-                              name="email" 
-                              className="form-control" 
+                            <label htmlFor="email">Email</label>
+                            <input
+                              id="email"
+                              type="email"
+                              name="email"
+                              className="form-control"
                               value={formData.email}
                               onChange={handleInputChange}
-                              required 
+                              required
                             />
                           </div>
                         </div>
 
                         <div className="col-md-6">
                           <div className="mb-3">
-                            <label>Subject</label>
-                            <input 
-                              type="text" 
-                              name="subject" 
-                              className="form-control" 
+                            <label htmlFor="subject">Subject</label>
+                            <input
+                              id="subject"
+                              type="text"
+                              name="subject"
+                              className="form-control"
                               value={formData.subject}
                               onChange={handleInputChange}
-                              required 
+                              required
                             />
                           </div>
                         </div>
 
                         <div className="col-md-6">
                           <div className="mb-3">
-                            <label>Phone Number</label>
-                            <input 
-                              type="text" 
-                              name="phone" 
+                            <label htmlFor="phone">Phone Number</label>
+                            <input
+                              id="phone"
+                              type="text"
+                              name="phone"
                               className={`form-control ${phoneError ? 'is-invalid' : ''}`}
                               value={formData.phone}
                               onChange={handleInputChange}
-                              required 
+                              required
                               maxLength="10"
                               pattern="[0-9]{10}"
                               title="Please enter exactly 10 digits"
@@ -251,11 +260,12 @@ export default function ContactUs() {
 
                         <div className="col-md-12">
                           <div className="mb-3">
-                            <label>Message</label>
-                            <textarea 
-                              className="form-control" 
-                              name="message" 
-                              rows="6" 
+                            <label htmlFor="message">Message</label>
+                            <textarea
+                              id="message"
+                              className="form-control"
+                              name="message"
+                              rows="6"
                               value={formData.message}
                               onChange={handleInputChange}
                               required
@@ -265,13 +275,14 @@ export default function ContactUs() {
 
                         <div className="col-md-12 text-end">
                           {isSubmitting && <div className="loading">Loading</div>}
-                          
-                          <button type="submit" disabled={isSubmitting}>
+
+                          <button className='btn btn-primary' type="submit" disabled={isSubmitting}>
                             {isSubmitting ? 'Sending...' : 'Send Message'}
                           </button>
                         </div>
                       </div>
                     </form>
+
                   </div>
                 </div>
               </div>
@@ -282,19 +293,19 @@ export default function ContactUs() {
         {/* Map */}
         <div data-aos="fade-up" data-aos-delay="200">
           <div className="contactMap">
-            <iframe 
-              style={{ border: 0, width: '100%', height: '470px' }} 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.376603084434!2d75.8044907!3d26.892553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db70010ed019f%3A0x9dcb03c793769956!2sHG%20Holdings!5e0!3m2!1sen!2sin!4v1688398423745!5m2!1sen!2sin" 
-              frameBorder="0" 
-              allowFullScreen 
-              loading="lazy" 
+            <iframe
+              style={{ border: 0, width: '100%', height: '470px' }}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.376603084434!2d75.8044907!3d26.892553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db70010ed019f%3A0x9dcb03c793769956!2sHG%20Holdings!5e0!3m2!1sen!2sin!4v1688398423745!5m2!1sen!2sin"
+              frameBorder="0"
+              allowFullScreen
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
       </section>
 
-           {/* Clients Section */}
+      {/* Clients Section */}
       <section id="clients" className="clients section">
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <Swiper
@@ -333,10 +344,10 @@ export default function ContactUs() {
           >
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <SwiperSlide key={item}>
-                <img 
-                  src={`/assets/images/clients/client-${item}.png`} 
-                  className="img-fluid" 
-                  alt={`Client ${item}`} 
+                <img
+                  src={`/assets/images/clients/client-${item}.png`}
+                  className="img-fluid"
+                  alt={`Client ${item}`}
                 />
               </SwiperSlide>
             ))}

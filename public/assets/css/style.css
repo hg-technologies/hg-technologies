@@ -28,10 +28,10 @@ text-decoration: none !important;
 }
 
 .btn:hover, .btn:focus {
-background: var(--accent-color) !important;
-	color: #fff !important;
+  background: var(--accent-color) !important;
+	color: #333 !important;
 	border: 2px solid var(--accent-color);
-	background-color: transparent !important;
+	background-color: var(--accent-color) !important;
 }
 
 
@@ -1260,7 +1260,7 @@ height: 50px
   display: block;
   height: auto;
   width: auto;
-  margin:2px 0 0 auto;
+  margin:2px 0 0 auto !important;
 }
 /*--android page--*/
 /*--profolio--*/
@@ -1818,7 +1818,7 @@ height: 50px
 }
 
 .mission-vision-sect p{
-  color: #fff;
+  color: #fff; text-align: justify;
 }
 .ourteam-section{
   background: #f2f2f2;
@@ -1997,6 +1997,9 @@ background-color: #14173b  !important ;
 .about-top-content {
 	padding:15px 30px; min-height: 300px;
 }
+.aiPage .about-top-content {
+	padding:15px 30px; min-height: 340px !important;
+}
 
 
 .about-top-item div.title {
@@ -2034,7 +2037,7 @@ background-color: #14173b  !important ;
   .homeAboutBg{background: #020722!important;  }
   .homeAboutBg h2{ color: #fff !important;}
   .homeAboutBg p{ color: #fff !important; }
-  .abDetails p{font-size: 18px;}
+  .abDetails p{font-size: 18px; text-align: justify;}
   .homeTeamBg{ background: #dab068 !important;  }
   .homeAboutBg .section-title {	padding-bottom: 30px !important;padding-left: 0 !important;padding-right: 0 !important;}
 
@@ -2149,7 +2152,7 @@ background-color: #14173b  !important ;
 
 .why-join h3{color: #fff; font-size: 36px;}
 .why-join h3 span{color: var(--nav-hover-color); font-weight: 800; }
-.why-join p{color: #fff;}
+.why-join p{color: #fff; text-align: justify;}
 
 
 .careersRightBlog {
@@ -2235,7 +2238,7 @@ background-color: #14173b  !important ;
 	padding: 30px 40px;
 	border-radius: 20px;
 	margin: 0 0 40px;
-	min-height: 300px !important;
+	min-height: 330px !important;
   	transition: all ease-in-out 0.3s;
 }
 

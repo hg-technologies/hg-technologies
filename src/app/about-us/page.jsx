@@ -21,7 +21,6 @@ export default function AboutUs() {
   const stats = [
     { label: "Senior & Expert Staff", value: "75%" },
     { label: "Team Members", value: "50+" },
-    { label: "Year's in Business", value: "3+" },
     { label: "Clients On-board", value: "25+" },
     { label: "Completed Projects", value: "25+" }
   ];
@@ -52,7 +51,7 @@ export default function AboutUs() {
     },
     {
       icon: "/assets/images/client-icon.png",
-      value: "90%",
+      value: "100%",
       description: "Client Satisfaction Rate"
     },
     {
@@ -140,7 +139,7 @@ export default function AboutUs() {
               <div className="abDetails">
                 <p>
                   At <b>HG Technologies,</b> we specialize in delivering intelligent, future-ready digital solutions that empower businesses to scale, 
-                  innovate, and lead in a rapidly evolving tech landscape. We believe technology should be more than just functional — it should be 
+                  innovate, and lead in a rapidly evolving tech landscape. We believe technology should be more than just functional, it should be 
                   transformative.
                 </p>
                 <p>
@@ -219,7 +218,7 @@ export default function AboutUs() {
                 <div className="mb-5">
                   <h3>Vision</h3>
                   <p>
-                    We aim to be a trusted IT partner for organizations worldwide — one that brings clarity, neutrality, 
+                    We aim to be a trusted IT partner for organizations worldwide, one that brings clarity, neutrality, 
                     and integrity to every engagement. By offering unbiased technology guidance and value-driven services, 
                     we empower businesses to adopt the right solutions with confidence.
                     From strategy to execution, we stand by our clients as a dependable, end-to-end partner committed to their success.
@@ -228,7 +227,7 @@ export default function AboutUs() {
                 <div>
                   <h3>Mission</h3>
                   <p>
-                    At HG Technologies, we begin by truly listening to our customers — understanding their needs, challenges, and aspirations. 
+                    At HG Technologies, we begin by truly listening to our customers, understanding their needs, challenges, and aspirations. 
                     We thoughtfully explore the right technological possibilities and craft tailored solutions that align perfectly with their goals. 
                     Our approach is rooted in collaboration, transparency, and ongoing support, ensuring long-term success and mutual growth.
                   </p>

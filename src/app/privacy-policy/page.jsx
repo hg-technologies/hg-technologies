@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
       {/* Privacy Policy Content */}
       <section id="contact" className="contact section contactFromBlog pb-0">
         <div className="container section-title aos-init aos-animate" data-aos="fade-up">
-          <h2>Privacy Policy</h2>
+          <h2>Privacy Policy</h2>       
 
           <div className="normalText">
             <p> The privacy policy is effective September 22, 2025.<br />

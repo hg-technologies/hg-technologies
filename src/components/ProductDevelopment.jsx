@@ -46,30 +46,29 @@ export default function ProductDevelopment() {
               <div className="section-title">
                 <h2>Product Development</h2>
                 <p>End-to-End Customization</p>
-              </div>
-              
-              <ul className="ticklist">
-                <li>
-                  <span>Feature Discovery & Documentation</span>
-                  - Every project begins with detailed analysis and documentation of all functional and non-functional features to ensure full clarity and alignment.
-                </li>
-                <li>
-                  <span>Wireframing & Prototyping</span>
-                  - Early-stage wireframes and prototypes define user flow, structure, and functionality—ensuring efficient design and development.
-                </li>
-                <li>
-                  <span>Intuitive UI/UX Design</span>
-                  - User-centric designs crafted for clarity, engagement, and seamless navigation across all devices, enhancing the overall experience.
-                </li>
-                <li>
-                  <span>Agile & Scalable Development</span>
-                  - A robust agile process paired with modern tech stacks delivers secure, high-performance, and scalable digital products.
-                </li>
-              </ul>
-            </div>
+              </div>              
+                  <ul className="ticklist">
+                    <li>
+                      <span>Feature Discovery & Documentation</span>
+                      - Every project begins with detailed analysis and documentation of all functional and non-functional features to ensure full clarity and alignment.
+                    </li>
+                    <li>
+                      <span>Wireframing & Prototyping</span>
+                      - Early-stage wireframes and prototypes define user flow, structure, and functionality—ensuring efficient design and development.
+                    </li>
+                    <li>
+                      <span>Intuitive UI/UX Design</span>
+                      - User-centric designs crafted for clarity, engagement, and seamless navigation across all devices, enhancing the overall experience.
+                    </li>
+                    <li>
+                      <span>Agile & Scalable Development</span>
+                      - A robust agile process paired with modern tech stacks delivers secure, high-performance, and scalable digital products.
+                    </li>
+                  </ul>
+             </div>
             
-            <div className="col-lg-6 col-md-12 align-self-center animated fadeInRight">
-              <div className="text-center">
+            <div className="col-lg-6 col-md-12 align-self-center ">
+              <div className="text-center ">
               <img 
                 src="/assets/images/product_img.jpg" 
                 className="img-fluid radiusImg" 
@@ -78,8 +77,6 @@ export default function ProductDevelopment() {
               />
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -90,8 +87,7 @@ export default function ProductDevelopment() {
           <div className="section-title">
             <h2>SERVICES</h2>
             <p>Product Customisation Solutions</p>
-          </div>
-          
+          </div>          
           <div className="row">
             {[
               {

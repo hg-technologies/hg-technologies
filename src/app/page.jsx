@@ -1,15 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react'; // Add useState here
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-
 export default function Home() {
- const [showVideoModal, setShowVideoModal] = useState(false);
+  const [showVideoModal, setShowVideoModal] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
 
   useEffect(() => {
@@ -36,35 +35,11 @@ export default function Home() {
         }
       }
     });
-
-    // Play modal video when modal is shown
-    if (showVideoModal && videoPlaying) {
-      const modalVideo = document.getElementById('modal-video');
-      if (modalVideo) {
-        modalVideo.muted = false;
-        modalVideo.loop = true;
-        modalVideo.playsInline = true;
-        modalVideo.play().catch(error => {
-          console.error('Modal video play failed:', error);
-        });
-      }
-    }
-  }, [showVideoModal, videoPlaying]);
+  }, []);
 
   const handlePlayVideo = () => {
-    setShowVideoModal(true);
-    setVideoPlaying(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowVideoModal(false);
-    setVideoPlaying(false);
-    
-    // Pause the video when modal is closed
-    const modalVideo = document.getElementById('modal-video');
-    if (modalVideo) {
-      modalVideo.pause();
-    }
+    // Open video in a new tab
+    window.open('/assets/images/watch_video.mp4', '_blank');
   };
 
   return (
@@ -116,7 +91,7 @@ export default function Home() {
               <div className="abDetails">
                 <p>
                   At <b>HG Technologies</b>, we create intelligent, future-ready digital solutions that help businesses scale, adapt, 
-                  and grow. We go beyond functionality to deliver transformative Technologies — blending AI, 
+                  and grow. We go beyond functionality to deliver transformative Technologies, blending AI, 
                   automation, blockchain, and cloud to drive real impact.
                 </p>
                 <p>
@@ -148,7 +123,7 @@ export default function Home() {
                 <div className="about-top-content">
                   <div className="title">Vision</div>
                   <p>
-                    We aim to be a trusted IT partner for organizations worldwide — one that brings clarity, neutrality, and integrity to every engagement.
+                    We aim to be a trusted IT partner for organizations worldwide, one that brings clarity, neutrality, and integrity to every engagement.
                     By offering unbiased technology guidance and value-driven services, we empower businesses to adopt the right solutions with confidence.
                     From strategy to execution, we stand by our clients as a dependable, end-to-end partner committed to their success.
                   </p>
@@ -169,7 +144,7 @@ export default function Home() {
                 <div className="about-top-content">
                   <div className="title">Mission</div>
                   <p>
-                    At <b>HG Technologies</b>, we begin by truly listening to our customers — understanding their needs, challenges, and aspirations. We thoughtfully explore the right technological 
+                    At <b>HG Technologies</b>, we begin by truly listening to our customers, understanding their needs, challenges, and aspirations. We thoughtfully explore the right technological 
                     possibilities and craft tailored solutions that align perfectly with their goals. 
                     Our approach is rooted in collaboration, 
                     transparency, and ongoing support, ensuring long-term success and mutual growth.
@@ -224,7 +199,7 @@ export default function Home() {
         <div className="bg"></div>
         <div className="bg bg2"></div>
         <div className="bg bg3"></div>
-        <div className="container">*/
+        <div className="container">
           <div className="row">
             <div className="col-md-5 business-info-content animated fadeInLeft">
               <h3>Transforming Businesses with <span><b>Technologies that Breaks Barriers </b></span> and Connects the World.</h3>
@@ -244,10 +219,7 @@ export default function Home() {
                   <h2>25+</h2>
                   <p>Projects Delivered</p>
                 </li>
-                <li className="animated bounceInRight">
-                  <h2>3+</h2>
-                  <p>Years of Expertise</p>
-                </li>
+             
                 <li className="animated bounceInRight">
                   <button className="playbtn" onClick={handlePlayVideo}>
                     <span className="playbtn-img">
@@ -274,45 +246,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Video Modal */}
-      {showVideoModal && (
-        <div className="modal fade full-width-pop show" style={{ display: 'block' }} id="videohg" tabIndex="-1">
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <button type="button" className="btn-close" onClick={handleCloseModal}>
-                  <img src="/assets/images/modal-close.png" alt="Close" />
-                </button>
-              </div>
-              <div className="modal-body pt-0">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-md-12">
-                      <video 
-                        id="modal-video"
-                        className="banner-bg-video"
-                        autoPlay 
-                        muted={false}
-                        loop 
-                        playsInline 
-                        preload="auto" 
-                        width="100%" 
-                        height="100%"
-                      >
-                        <source src="/assets/images/watch_video.mp4.webm" type="video/webm" />
-                        <source src="/assets/images/watch_video.mp4.ogv" type="video/ogg" />
-                        <source src="/assets/images/watch_video.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials section dark-background">
@@ -355,9 +288,8 @@ export default function Home() {
                   <h4>(MD, HG Technologies)</h4>
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    <span>Technologies today is not just a tool — it's a catalyst for business evolution. Our team is dedicated to developing robust 
-                      architectures, user-centric interfaces, and secure, adaptive platforms 
-                      that help organizations stay ahead of the curve. With every solution we build, our focus remains on performance, precision, and purpose.</span>
+                    <span>Technologies today is not just a tool, it's a catalyst for business evolution. Our team is dedicated to developing robust 
+                      architectures, user-centric interfaces, and secure, adaptive platforms that help organizations stay ahead of the curve. With every solution we build, our focus remains on performance, precision, and purpose.</span>
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>

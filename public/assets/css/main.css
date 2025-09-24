@@ -408,7 +408,7 @@ h6 {
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: color-mix(in srgb, var(--accent-color), white 90%);
+    background-color: color-mix(in srgb, var(--accent-color), white 0%);
   }
 
   .navmenu a:hover,
@@ -1090,7 +1090,7 @@ section,
 
 .services .service-item:hover {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.5);
-  transform: translateY(-20px);
+  transform: translateY(-10px);
   border: 1px solid #d7993e;
 
 
@@ -1374,7 +1374,7 @@ section,
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 26px;
+  font-size: 16px;
   line-height: 0;
 }
 

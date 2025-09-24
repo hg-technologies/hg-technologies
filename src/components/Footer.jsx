@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="container">
             <div className="row gy-4">
-              <div className="col-lg-4 col-md-6 footer-about">
+              <div className="col-lg-5 col-md-6 footer-about">
                 <Link href="/" className="logo d-flex align-items-center">
                   <span className="sitename">HG Technologies</span>
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-md-3 footer-links">
+              <div className="col-lg-3 col-md-3 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
                   <li><i className="bi bi-chevron-right"></i> <Link href="/">Home</Link></li>
@@ -97,7 +97,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="col-lg-2 col-md-3 footer-links">
+              <div className="col-lg-3 col-md-3 footer-links">
                 <h4>Our Services</h4>
                 <ul>
                   <li><i className="bi bi-chevron-right"></i> <Link href="/services/ai-project">AI Project Development</Link></li>
@@ -109,7 +109,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="col-lg-4 col-md-12 footer-newsletter">
+              {/* <div className="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Newsletter</h4>
 
                 <form className="php-email-form" onSubmit={handleSubmit} >
@@ -124,7 +124,8 @@ export default function Footer() {
                 </form>
                 <p className="emailSub">I agree to receive promotional emails and updates from HG Technologies.
                   <Link href="/privacy-policy"> Privacy Policy</Link> &  <Link href="/terms-service">Terms of Service</Link></p>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </div>

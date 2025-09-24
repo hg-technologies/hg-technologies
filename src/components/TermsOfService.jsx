@@ -63,7 +63,6 @@ export default function TermsOfService() {
       <section id="contact" className="contact section contactFromBlog pb-0">
         <div className="container section-title aos-init aos-animate" data-aos="fade-up">
           <h2>Terms of Service</h2>
-          <p>Please read these terms carefully before using our services.</p>
 
           <div className="normalText">
             <p>

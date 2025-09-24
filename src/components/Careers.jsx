@@ -136,7 +136,7 @@ export default function Careers() {
             <div className="col-md-12">
               <div className="why-join">
                 <h3>Why join <br/> <span>HG Technologies? </span></h3>
-                <p>At HG Technologies, we take pride in our exceptional team of over 1000+ highly motivated professionals. 
+                <p>At HG Technologies, we take pride in our exceptional team of over 50+ highly motivated professionals. 
                   Our employees are not only experts in advanced technologies but are also well-trained in global communication. 
                   This unique combination ensures that we deliver first-class solutions while engaging effectively 
                   with clients worldwide. We emphasize continuous learning and innovation, empowering our teams with 

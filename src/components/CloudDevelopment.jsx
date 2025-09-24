@@ -51,7 +51,7 @@ const CloudDevelopment = () => {
                 <ul className="ticklist">
                   <li>
                     <span>Accelerated Release Pipelines</span> - With continuous integration and continuous deployment (CI/CD), 
-                    we automate builds, testing, and deployments—cutting down release times and ensuring every update is reliable and high-quality.
+                    we automate builds, testing, and deployments, cutting down release times and ensuring every update is reliable and high-quality.
                   </li>
                   <li>
                     <span>Unified Collaboration</span> - DevOps is more than tools; it's about culture. We streamline collaboration 
