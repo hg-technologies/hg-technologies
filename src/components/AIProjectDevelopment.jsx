@@ -53,7 +53,7 @@ export default function AIProjectDevelopment() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2><span>AI Project Development</span></h2>
+              <h2>AI Project Development</h2>
             </div>        
           </div>
         </div>
@@ -171,9 +171,7 @@ export default function AIProjectDevelopment() {
                 </div>
               </div>
 
-              <div className="col-xl-6 col-md-12">  
-
-            
+              <div className="col-xl-6 col-md-12">            
 
               {/* <video className="banner-bg-video" autoPlay muted loop playsInline preload="auto" width="100%" height="400">
                   <source src="/assets/images/ai-consultants.mp4" type="video/webm" />
@@ -182,12 +180,15 @@ export default function AIProjectDevelopment() {
                   Your browser does not support the video tag.
                 </video> */}
 
-                   <video className="banner-bg-video" autoPlay muted loop playsInline preload="auto" width="100%" height="400">
-                    <source src="/assets/images/ai-consultants.mp4" type="video/mp4" />
-                     Your browser does not support the video tag.
-                 </video>
-
-              
+                <div className="text-center ">           
+                   <Image 
+                    className="img-fluid" 
+                    src="/assets/images/ai-consultants.gif" 
+                    alt="AI Consultants" 
+                    width={550}
+                    height={450}
+                  />
+                </div>             
 
               </div>
             </div>

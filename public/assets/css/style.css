@@ -2298,3 +2298,7 @@ background-color: #14173b  !important ;
 
 .enquireNowLogo img{max-width: 200px;}
 
+.count {
+  font-size: 2rem;
+  font-weight: bold;
+}

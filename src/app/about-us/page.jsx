@@ -107,7 +107,7 @@ export default function AboutUs() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2><span>About Us</span></h2>
+              <h2>About Us</h2>
             </div>
           </div>
         </div>
@@ -282,6 +282,8 @@ export default function AboutUs() {
         </div>
       </section>
 
+
+
        {/* Clients Section */}
       <section id="clients" className="clients section">
         <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -332,6 +334,10 @@ export default function AboutUs() {
           </Swiper>
         </div>
       </section>
+
+
+
+    
 
       
     </>

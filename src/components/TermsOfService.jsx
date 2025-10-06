@@ -53,7 +53,7 @@ export default function TermsOfService() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2><span>Terms of Service</span></h2>
+              <h2>Terms of Service</h2>
             </div>
           </div>
         </div>

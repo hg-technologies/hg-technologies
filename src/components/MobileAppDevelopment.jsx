@@ -32,7 +32,7 @@ export default function MobileAppDevelopment() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2><span>Mobile App Development</span></h2>
+              <h2>Mobile App Development</h2>
             </div>        
           </div>
         </div>

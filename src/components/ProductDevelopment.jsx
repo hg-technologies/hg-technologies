@@ -32,7 +32,7 @@ export default function ProductDevelopment() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2><span>Product Development</span></h2>
+              <h2>Product Development</h2>
             </div>        
           </div>
         </div>

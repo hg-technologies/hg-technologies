@@ -132,7 +132,8 @@ export default function ContactUs() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2 className="titleManSlide">Connect, Collaborate, and <span>Innovate </span> with Us</h2>
+                {/* <h2 className="titleManSlide">Connect, Collaborate, and Innovate  with Us</h2> */}
+                <h2 className="titleManSlide">Contact Us</h2>
             </div>
           </div>
         </div>

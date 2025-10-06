@@ -35,6 +35,40 @@ export default function Home() {
         }
       }
     });
+
+
+    const counters = document.querySelectorAll('.count');
+const speed = 200;
+
+const animateCount = (counter) => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const step = target / speed;
+
+  const update = () => {
+    count += step;
+    if (count < target) {
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(update);
+    } else {
+      counter.innerText = target + "+";
+    }
+  };
+  update();
+};
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCount(entry.target);
+      obs.unobserve(entry.target); // run only once
+    }
+  });
+});
+
+counters.forEach(c => observer.observe(c));
+
+
   }, []);
 
   const handlePlayVideo = () => {
@@ -54,7 +88,7 @@ export default function Home() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-9 col-lg-6">
-              <h2>Transform Ideas Into Digital Power with <span> HG Technologies </span></h2>
+              <h2>Transform Ideas Into Digital Power with <span className="animate-charcter"> HG Technologies </span></h2>
               <p>We are a team of technology specialists building smart digital solutions.</p>
             </div>
           </div>
@@ -62,7 +96,7 @@ export default function Home() {
           <div className="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
             {/* Icon boxes */}
             {[
-              { icon: 'bi-binoculars', title: 'Quality Service' },
+              { icon: 'bi-binoculars', title: 'Quality Service' }, 
               { icon: 'bi-bullseye', title: 'Customized Solutions' },
               { icon: 'bi-fullscreen-exit', title: 'User-Centric Design' },
               { icon: 'bi-card-list', title: 'Technology Experts' },
@@ -212,13 +246,13 @@ export default function Home() {
             <div className="col-md-6">
               <ul className="feature-hl-list">
                 <li className="animated bounceInRight">
-                  <h2>50+</h2>
-                  <p>Tech Experts On-board</p>
-                </li>
-                <li className="animated bounceInRight">
-                  <h2>25+</h2>
-                  <p>Projects Delivered</p>
-                </li>
+                <h2 className="count" data-target="50">0</h2>
+                <p>Tech Experts On-board</p>
+              </li>
+              <li className="animated bounceInRight">
+                <h2 className="count" data-target="25">0</h2>
+                <p>Projects Delivered</p>
+              </li>
              
                 <li className="animated bounceInRight">
                   <button className="playbtn" onClick={handlePlayVideo}>
@@ -246,6 +280,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+ 
 
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials section dark-background">
@@ -353,3 +389,4 @@ export default function Home() {
     </>
   );
 }
+
