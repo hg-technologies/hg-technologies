@@ -10,6 +10,8 @@ import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function AIProjectDevelopment() {
   useEffect(() => {
@@ -41,6 +43,14 @@ export default function AIProjectDevelopment() {
     });
   }, []);
 
+    useEffect(() => {
+        AOS.init({
+          duration: 800,
+          once: true, // animations fire only once
+          easing: 'ease-in-out',
+        });
+      }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -50,7 +60,7 @@ export default function AIProjectDevelopment() {
           Your browser does not support the video tag.
         </video>
         
-        <div className="container">
+        <div className="container" >
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
               <h2>AI Project Development</h2>
@@ -61,7 +71,7 @@ export default function AIProjectDevelopment() {
 
       {/* Section Title */}
       <section className="contact section contactFromBlog pb-0 ">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>AI Project Development</h2>
           <p>Scalable GenAI, data science solutions and trusted worldwide.</p>
         </div>
@@ -69,7 +79,7 @@ export default function AIProjectDevelopment() {
 
       {/* Features Section */}
       <section id="features" className="features section missionBlogBg aiMobile aiPage">
-        <div className="container" data-aos="fade-up">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row about-top-item-wrapper">  
             <div className="col-xl-4 col-md-6 about-top-item-inner">
               <div className="about-top-item visionMobileM">
@@ -198,7 +208,7 @@ export default function AIProjectDevelopment() {
 
       {/* Services Section */}
       <section id="services" className="services section homeServiceBg">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Services</h2>
           <p>AI-Powered Intelligence for Modern Business</p>
         </div>

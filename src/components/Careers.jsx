@@ -1,7 +1,7 @@
 // components/Careers.jsx
 'use client';
 
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -10,7 +10,18 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Careers() {
+    useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,6 +46,8 @@ export default function Careers() {
     }));
   };
 
+  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
@@ -43,27 +56,27 @@ export default function Careers() {
 
   const jobOpenings = [
     {
-      title: "UI/UX Designer (0)",
+      title: "UI/UX Designer (1)",
       experience: "5+ Years",
       description: "UI/UX Designer skilled in crafting intuitive web & mobile interfaces using Figma, Sketch, and Adobe XD."
     },
     {
-      title: "Business Analyst (0)",
+      title: "Business Analyst (2)",
       experience: "3+ Years",
       description: "Business Analyst skilled in gathering requirements, analyzing processes, and delivering data-driven solutions for improved business outcomes."
     },
     {
-      title: "ReactJS Developer (0)",
+      title: "ReactJS Developer (3)",
       experience: "2+ Years",
       description: "ReactJS Developer skilled in building dynamic, responsive, and user-friendly web applications with modern JavaScript frameworks."
     },
     {
-      title: "Quality Analyst (0)",
+      title: "Quality Analyst (2)",
       experience: "8+ Years",
       description: "Quality Analyst skilled in testing, identifying issues, and ensuring high-quality, reliable software delivery."
     },
     {
-      title: "Mobile Developer (0)",
+      title: "Mobile Developer (1)",
       experience: "4+ Years",
       description: "Mobile Developer skilled in building responsive, high-performance Android and iOS applications with seamless user experiences."
     }

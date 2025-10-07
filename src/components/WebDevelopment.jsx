@@ -11,11 +11,17 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function WebDevelopment() {
-  useEffect(() => {
-    // Initialize any required JavaScript functionality
-    // This would typically include animations, etc.
-  }, []);
+   useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
 
   return (
     <>

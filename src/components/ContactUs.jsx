@@ -1,7 +1,7 @@
 // components/ContactUs.jsx
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef , useEffect} from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,8 @@ import ReCAPTCHA from 'react-google-recaptcha';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -41,6 +43,14 @@ export default function ContactUs() {
       [name]: value
     }));
   };
+
+      useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
 
   const validatePhone = (phone) => {
     // Remove any non-digit characters

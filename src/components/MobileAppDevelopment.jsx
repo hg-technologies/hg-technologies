@@ -10,12 +10,18 @@ import { Pagination, Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function MobileAppDevelopment() {
-  useEffect(() => {
-    // Initialize any required JavaScript functionality
-    // This would typically include animations, etc.
-  }, []);
+
+      useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
 
   return (
     <>
@@ -82,7 +88,7 @@ export default function MobileAppDevelopment() {
 
       {/* Mobile Expertise Section */}
       <div className="develop-section">
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="section-title">
             <h2>Mobile Expertise</h2>
             <p>Mobile App Development Expertise</p>
@@ -141,7 +147,7 @@ export default function MobileAppDevelopment() {
 
       {/* Portfolio Section */}
       <div className="feature-card-sect">
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
             <div className="col-lg-6 col-md-12 align-self-center mb-5">
               <div className="text-center">
@@ -179,12 +185,12 @@ export default function MobileAppDevelopment() {
 
       {/* Services Section */}
       <section id="services" className="services section homeServiceBg">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Services</h2>
           <p>Expertise In Mobile Application Development</p>
         </div>
 
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4 mb-5">
             {[
               {

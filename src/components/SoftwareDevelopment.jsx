@@ -11,11 +11,18 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 export default function SoftwareDevelopment() {
-  useEffect(() => {
-    // Initialize any required JavaScript functionality
-    // This would typically include animations, etc.
-  }, []);
+   useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
 
   return (
     <>
@@ -40,7 +47,7 @@ export default function SoftwareDevelopment() {
 
       {/* Section Title */}
       <section id="contact" className="contact section contactFromBlog pb-0">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Software Development</h2>
           <p>Custom Software Development for Multiple Business Domains</p>
         </div>
@@ -48,7 +55,7 @@ export default function SoftwareDevelopment() {
 
       {/* Features Section */}
       <section className="features section missionBlogBg customSoftwareTop">
-        <div className="container" data-aos="fade-up">        
+        <div className="container" data-aos="fade-up" data-aos-delay="100">        
           <div className="row about-top-item-wrapper">  
             {[
               {
@@ -141,7 +148,7 @@ export default function SoftwareDevelopment() {
 
       {/* Services Section */}
       <section id="services" className="services section homeServiceBg">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Services</h2>
           <p>Best Custom Software Development</p>
         </div>
@@ -180,7 +187,7 @@ export default function SoftwareDevelopment() {
                 description: 'Besides developing fully scalable and profit-driven software, we put in our best efforts to keep the product alive for years to come. With our mobile app support and maintenance services, you can keep your business software updated per the latest market trends and constantly generate huge revenue.'
               }
             ].map((service, index) => (
-              <div key={index} className="col-lg-4 col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay={index < 3 ? 600 : (index - 2) * 100}>
+              <div key={index} className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={index < 3 ? 600 : (index - 2) * 100}>
                 <div className="service-item position-relative">
                   <div className="icon">
                     <Image 
@@ -203,7 +210,7 @@ export default function SoftwareDevelopment() {
 
       {/* Call to Action Section */}
       <section id="why-join" className="" style={{backgroundImage: "url(/assets/images/software_bottom_bg.jpg)"}}>
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
             <div className="col-md-12">
               <div className="why-join">
