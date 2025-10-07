@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [showVideoModal, setShowVideoModal] = useState(false);
@@ -19,6 +20,46 @@ export default function Home() {
         easing: 'ease-in-out',
       });
     }, []);
+    const router = useRouter();
+    const services = [
+    {
+      img: "service-01.svg",
+      title: "AI Project Development",
+      desc: "We deliver custom AI solutions, from machine learning models to smart automation, helping businesses innovate and grow faster.",
+      path: "/services/ai-project",
+    },
+    {
+      img: "service-02.svg",
+      title: "Product Development",
+      desc: "End-to-end product development services that turn your ideas into scalable, user-focused digital products ready for market.",
+      path: "/services/product",
+    },
+    {
+      img: "service-03.svg",
+      title: "Software Development",
+      desc: "Build secure, high-performance software tailored to your business needs, streamlining operations and boosting efficiency.",
+      path: "/services/software",
+    },
+    {
+      img: "service-04.svg",
+      title: "Mobile App Development",
+      desc: "Designing and developing intuitive mobile apps for iOS and Android that enhance customer engagement and brand reach.",
+      path: "/services/mobileapp",
+    },
+    {
+      img: "service-05.svg",
+      title: "Web Development",
+      desc: "Create modern, responsive websites that look great on any device and help your brand connect and convert online.",
+      path: "/services/web",
+    },
+    {
+      img: "service-06.svg",
+      title: "Cloud Computing",
+      desc: "Empower your business with scalable and secure cloud solutions, from migration to deployment and architecture design.",
+      path: "/services/cloud",
+    },
+  ];
+
 
   useEffect(() => {
     // Video autoplay script for hero section
@@ -207,33 +248,36 @@ counters.forEach(c => observer.observe(c));
         </div>
 
         <div className="container">
+        
           <div className="row gy-4 mb-5">
-            {[
-              { img: 'service-01.svg', title: 'AI Project Development', desc: 'We deliver custom AI solutions, from machine learning models to smart automation, helping businesses innovate and grow faster.' },
-              { img: 'service-02.svg', title: 'Product Development', desc: 'End-to-end product development services that turn your ideas into scalable, user-focused digital products ready for market.' },
-              { img: 'service-03.svg', title: 'Software Development', desc: 'Build secure, high-performance software tailored to your business needs, streamlining operations and boosting efficiency.' },
-              { img: 'service-04.svg', title: 'Mobile App Development', desc: 'Designing and developing intuitive mobile apps for iOS and Android that enhance customer engagement and brand reach.' },
-              { img: 'service-05.svg', title: 'Web Development', desc: 'Create modern, responsive websites that look great on any device and help your brand connect and convert online.' },
-              { img: 'service-06.svg', title: 'Cloud Computing', desc: 'Empower your business with scalable and secure cloud solutions, from migration to deployment and architecture design.' }
-            ].map((service, index) => (
-              <div key={index} className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={index < 3 ? 600 : (index - 2) * 100}>
-                <div className="service-item position-relative">
-                  <div className="icon">
-                    <Image 
-                      src={`/assets/images/${service.img}`} 
-                      alt={service.title}
-                      width={70}
-                      height={70}
-                    />
-                  </div>
-                  <a href="javascript:void(0);" className="stretched-link">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className="col-lg-4 col-md-6"
+          data-aos="fade-up"
+          data-aos-delay={index < 3 ? 600 : (index - 2) * 100}
+        >
+          <div
+            className="service-item position-relative"
+            onClick={() => router.push(service.path)}
+          >
+            <div className="icon">
+              <Image
+                src={`/assets/images/${service.img}`}
+                alt={service.title}
+                width={70}
+                height={70}
+              />
+            </div>
+            <a href="javascript:void(0);" className="stretched-link">
                     <h3>{service.title}</h3>
                   </a>
                   <p>{service.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
+        </div>
+      ))}
+    </div>
+
         </div>
       </section>
 
