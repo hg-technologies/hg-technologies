@@ -1,7 +1,7 @@
 // components/Careers.jsx
 'use client';
 
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -14,13 +14,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Careers() {
-    useEffect(() => {
-          AOS.init({
-            duration: 800,
-            once: true, // animations fire only once
-            easing: 'ease-in-out',
-          });
-        }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animations fire only once
+      easing: 'ease-in-out',
+    });
+  }, []);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -46,7 +46,7 @@ export default function Careers() {
     }));
   };
 
-  
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -66,9 +66,9 @@ export default function Careers() {
       description: "Business Analyst skilled in gathering requirements, analyzing processes, and delivering data-driven solutions for improved business outcomes."
     },
     {
-      title: "ReactJS Developer (3)",
+      title: "Full Stack Developer (3)",
       experience: "2+ Years",
-      description: "ReactJS Developer skilled in building dynamic, responsive, and user-friendly web applications with modern JavaScript frameworks."
+      description: "Full Stack Developer skilled in building scalable, responsive, and high-performance web applications using modern front-end (React.js, Next.js) and back-end (Node.js, Express, MongoDB) technologies."
     },
     {
       title: "Quality Analyst (2)",
@@ -86,25 +86,25 @@ export default function Careers() {
     <>
       {/* Hero Section */}
       <section id="hero" className="hero aboutUsHero section dark-background">
-        <Image 
-          src="/assets/images/contact-us.jpg" 
-          alt="Careers at HG Technologies" 
+        <Image
+          src="/assets/images/contact-us.jpg"
+          alt="Careers at HG Technologies"
           fill
           style={{ objectFit: 'cover' }}
           data-aos="fade-in"
-        />        
+        />
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-              <h2 className="titleManSlide"> Careers </h2>           
-            </div>        
+              <h2 className="titleManSlide"> Careers </h2>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Careers Content */}
       <section className="contact section contactFromBlog pb-0">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">        
+        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
           <h2>Career</h2>
           <p>Where Innovation Meets Opportunity</p>
         </div>
@@ -121,10 +121,10 @@ export default function Careers() {
                         <p>Experience : {job.experience}</p>
                         <p>{job.description}</p>
                       </div>
-                      <a 
-                        className="btn btn-primary" 
-                        href="https://hgholdings.keka.com/careers/" 
-                        target="_blank" 
+                      <a
+                        className="btn btn-primary"
+                        href="https://hgholdings.keka.com/careers/"
+                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         Apply Now
@@ -132,15 +132,15 @@ export default function Careers() {
                     </li>
                   ))}
                 </ul>
-              </div>                   
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why Join Section */}
-      <section 
-        id="why-join" 
+      <section
+        id="why-join"
         className=""
         style={{ backgroundImage: "url(/assets/images/why-join.jpg)" }}
       >
@@ -148,97 +148,97 @@ export default function Careers() {
           <div className="row">
             <div className="col-md-12">
               <div className="why-join">
-                <h3>Why join <br/> <span>HG Technologies? </span></h3>
-                <p>At HG Technologies, we take pride in our exceptional team of over 50+ highly motivated professionals. 
-                  Our employees are not only experts in advanced technologies but are also well-trained in global communication. 
-                  This unique combination ensures that we deliver first-class solutions while engaging effectively 
-                  with clients worldwide. We emphasize continuous learning and innovation, empowering our teams with 
+                <h3>Why join <br /> <span>HG Technologies? </span></h3>
+                <p>At HG Technologies, we take pride in our exceptional team of over 50+ highly motivated professionals.
+                  Our employees are not only experts in advanced technologies but are also well-trained in global communication.
+                  This unique combination ensures that we deliver first-class solutions while engaging effectively
+                  with clients worldwide. We emphasize continuous learning and innovation, empowering our teams with
                   the latest skills. Every project is managed with precision, following tried and tested processes.</p>
                 <p>
-                  From the very first step of initiation to the final stage of delivery, excellence remains our focus. Our commitment 
+                  From the very first step of initiation to the final stage of delivery, excellence remains our focus. Our commitment
                   extends beyond delivery, with reliable ongoing support for every client. We believe in building trust through transparent
-                  communication and consistent performance. Our global reach is strengthened by a workforce that adapts to diverse client needs. 
+                  communication and consistent performance. Our global reach is strengthened by a workforce that adapts to diverse client needs.
                   Together, we create solutions that are innovative, reliable, and impactful across industries.</p>
-                
+
                 <a className="btn btn-primary mt-3" href="/contact-us">Share Your Requirements</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-{/* Clients Section */}
-<section id="clients" className="clients section">
-  <div className="container" data-aos="fade-up" data-aos-delay="100">
-    <Swiper
-      loop={true}
-      speed={600}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      slidesPerView="auto"
-      pagination={{
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-      }}
-      breakpoints={{
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 60,
-        },
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 80,
-        },
-        992: {
-          slidesPerView: 5,
-          spaceBetween: 120,
-        },
-      }}
-      modules={[Pagination, Autoplay]}
-      className="init-swiper"
-    >
-      {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
-        const clientLinks = {
-          5: "https://www.hginfra.com/",
-          6: "https://www.natriel.com/",
-        };
-        const link = clientLinks[item];
+      {/* Clients Section */}
+      <section id="clients" className="clients section">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
+          <Swiper
+            loop={true}
+            speed={600}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            slidesPerView="auto"
+            pagination={{
+              el: '.swiper-pagination',
+              type: 'bullets',
+              clickable: true,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              480: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+              },
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 80,
+              },
+              992: {
+                slidesPerView: 5,
+                spaceBetween: 120,
+              },
+            }}
+            modules={[Pagination, Autoplay]}
+            className="init-swiper"
+          >
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+              const clientLinks = {
+                5: "https://www.hginfra.com/",
+                6: "https://www.natriel.com/",
+              };
+              const link = clientLinks[item];
 
-        return (
-          <SwiperSlide key={item}>
-            {link ? (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={`/assets/images/clients/client-${item}.png`}
-                  className="img-fluid"
-                  alt={`Client ${item}`}
-                  style={{ cursor: "pointer" }}
-                />
-              </a>
-            ) : (
-              <img
-                src={`/assets/images/clients/client-${item}.png`}
-                className="img-fluid"
-                alt={`Client ${item}`}
-              />
-            )}
-          </SwiperSlide>
-        );
-      })}
-      <div className="swiper-pagination"></div>
-    </Swiper>
-  </div>
-</section>
+              return (
+                <SwiperSlide key={item}>
+                  {link ? (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={`/assets/images/clients/client-${item}.png`}
+                        className="img-fluid"
+                        alt={`Client ${item}`}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={`/assets/images/clients/client-${item}.png`}
+                      className="img-fluid"
+                      alt={`Client ${item}`}
+                    />
+                  )}
+                </SwiperSlide>
+              );
+            })}
+            <div className="swiper-pagination"></div>
+          </Swiper>
+        </div>
+      </section>
 
     </>
   );
