@@ -170,7 +170,7 @@ display: inline-block;
 
 /*--business-info-cont--*/
 .business-info-cont{
-    padding:180px 0;
+    padding:150px 0;
     position: relative;
     overflow: hidden;
 }
@@ -2306,3 +2306,4 @@ background-color: #14173b  !important ;
 .footer-about{ padding-right: 4% !important;}
 .ftTitleAddress{ font-size: 14px; font-weight: 600;}
 .footer-about p{font-size: 12px; color: color-mix(in srgb, var(--default-color), transparent 30%); font-weight: 300;}
+
