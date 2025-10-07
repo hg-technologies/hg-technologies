@@ -89,7 +89,7 @@ const CloudDevelopment = () => {
         </div>
 
         <div className="develop-section">
-          <div className="container useTechnologies">
+          <div className="container useTechnologies" data-aos="fade-up" data-aos-delay="100">
             <div className="section-title">
               <h2>SERVICES</h2>
               <p>Modern Cloud Solutions With Endless Possibilities</p>
@@ -173,7 +173,7 @@ const CloudDevelopment = () => {
 
         <section className="missionBlogBg" style={{ paddingBottom: 0 }}>
           <div className="feature-card-sect">
-            <div className="container aos-init aos-animate" data-aos="fade-up">
+            <div className="container" data-aos="fade-up" data-aos-delay="100">
               <div className="section-title">
                 <h2>Technologies</h2>
                 <p>Technologies and Tools</p>
@@ -233,7 +233,7 @@ const CloudDevelopment = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <div className="why-join">
+                <div className="why-join" data-aos="fade-up" data-aos-delay="100">
                   <h3>Get Custom Solutions from an Award-Winning Cloud Solution Partner</h3>
                   <p>Let's build something amazing together.</p>
                   <Link className="btn btn-primary mt-3" href="/contact-us">

@@ -156,7 +156,7 @@ export default function AboutUs() {
       </section>
 
        {/* Animated Stats Section */}
-      <div className="hightlight-info">
+      <div className="hightlight-info" ata-aos="fade-up" data-aos-delay="100">
         <div className="container">
           <ul>
             {stats.map((stat, index) => (
@@ -330,6 +330,12 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+
+
+   
+
+
 
     {/* Clients Section */}
 <section id="clients" className="clients section">

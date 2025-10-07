@@ -172,7 +172,7 @@ export default function AIProjectDevelopment() {
                   </p>
                   <a 
                     href="/contact-us" 
-                    className="btn btn-primary" 
+                    className="btn btn-primary mb-5" 
                     data-bs-toggle="modal" 
                     data-bs-target="#request-modal"
                   >
@@ -213,7 +213,7 @@ export default function AIProjectDevelopment() {
           <p>AI-Powered Intelligence for Modern Business</p>
         </div>
 
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4 mb-5">
             {[
               {
@@ -273,7 +273,7 @@ export default function AIProjectDevelopment() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="why-join">
+              <div className="why-join" data-aos="fade-up" data-aos-delay="100">
                 <h3>Want to build AI solutions that deliver real results?</h3>
                 <p>Let's create a smarter product together.</p>
                 <Link className="btn btn-primary mt-3" href="/contact-us">

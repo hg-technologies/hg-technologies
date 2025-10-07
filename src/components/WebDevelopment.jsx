@@ -88,7 +88,7 @@ export default function WebDevelopment() {
 
       {/* Web Development Technologies Section */}
       <div className="develop-section">
-        <div className="container useTechnologies">
+        <div className="container useTechnologies" data-aos="fade-up" data-aos-delay="100">
           <div className="section-title">
             <h2>Web Development Technologies</h2>
             <p>Future-ready websites powered by the latest tech.</p>
@@ -147,9 +147,9 @@ export default function WebDevelopment() {
 
       {/* Portfolio Section */}
       <div className="feature-card-sect">
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
-            <div className="col-lg-6 col-md-12 align-self-center animated fadeInLeft mb-5">
+            <div className="col-lg-6 col-md-12 align-self-center mb-5">
               <div className="text-center">
               <img
                 src="/assets/images/desktop_img.png"
@@ -189,13 +189,13 @@ export default function WebDevelopment() {
       </div>
 
       {/* Services Section */}
-      <section id="services" className="services section homeServiceBg">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+      <section id="services" className="services section homeServiceBg" >
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Services</h2>
           <p>Expertise In Web Development</p>
         </div>
 
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4 mb-5">
             {[
               {
@@ -252,10 +252,10 @@ export default function WebDevelopment() {
 
       {/* Call to Action Section */}
       <section id="why-join" className="" style={{ backgroundImage: "url(/assets/images/advanced_web_bg.jpg)" }}>
-        <div className="container">
+        <div className="container" >
           <div className="row">
             <div className="col-md-12">
-              <div className="why-join">
+              <div className="why-join" data-aos="fade-up" data-aos-delay="100">
                 <h3>Benefit From Our Expert Web Development Services</h3>
                 <p>Let's build something amazing together.</p>
                 <Link className="btn btn-primary mt-3" href="/contact-us">
