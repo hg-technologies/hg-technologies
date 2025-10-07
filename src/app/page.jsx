@@ -430,6 +430,7 @@ counters.forEach(c => observer.observe(c));
         const clientLinks = {
           5: "https://www.hginfra.com/",
           6: "https://www.natriel.com/",
+          1: "https://www.jivocare.com/",
         };
         const link = clientLinks[item];
 

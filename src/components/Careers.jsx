@@ -58,7 +58,7 @@ export default function Careers() {
     {
       title: "UI/UX Designer (1)",
       experience: "5+ Years",
-      description: "UI/UX Designer skilled in crafting intuitive web & mobile interfaces using Figma, Sketch, and Adobe XD."
+      description: "UI/UX Designer skilled in crafting intuitive web & mobile interfaces using HTML5, CSS3, javascript, Figma, Sketch, and Adobe XD."
     },
     {
       title: "Business Analyst (2)",
@@ -207,6 +207,7 @@ export default function Careers() {
               const clientLinks = {
                 5: "https://www.hginfra.com/",
                 6: "https://www.natriel.com/",
+                1: "https://www.jivocare.com/",
               };
               const link = clientLinks[item];
 
