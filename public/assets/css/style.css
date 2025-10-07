@@ -474,7 +474,7 @@ height: 55px;
 
 
 .footerBg {
-	background: color-mix(in srgb, #00051c, transparent 20%); padding-top: 30px;
+	background: color-mix(in srgb, #00051c, transparent 20%); padding-top: 10px;
 }
 
 
@@ -2302,3 +2302,7 @@ background-color: #14173b  !important ;
   font-size: 2rem;
   font-weight: bold;
 }
+
+.footer-about{ padding-right: 4% !important;}
+.ftTitleAddress{ font-size: 14px; font-weight: 600;}
+.footer-about p{font-size: 12px; color: color-mix(in srgb, var(--default-color), transparent 30%); font-weight: 300;}

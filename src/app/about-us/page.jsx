@@ -128,7 +128,7 @@ export default function AboutUs() {
       {/* Hero Section */}
       <section id="hero" className="hero aboutUsHero section dark-background">
         <Image 
-          src="/assets/images/banner_about.gif" 
+          src="/assets/images/banner_about.jpg" 
           alt="About HG Technologies" 
           fill
           style={{ objectFit: 'cover' }}

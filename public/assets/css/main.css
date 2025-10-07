@@ -982,14 +982,15 @@ background: linear-gradient(120deg,#d7993e,#ffc97b);
 # Clients Section
 --------------------------------------------------------------*/
 .clients .swiper-slide img {
-  opacity: 0.5;
+  /*opacity: 0.5;*/
   transition: 0.3s;
-  filter: grayscale(100);
+  /*filter: grayscale(100);*/
 }
 
 .clients .swiper-slide img:hover {
   filter: none;
-  opacity: 1; cursor: pointer;
+  opacity: 0.3; cursor: pointer;
+  filter: grayscale(100);
 }
 
 .clients .swiper-wrapper {

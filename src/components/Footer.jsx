@@ -70,22 +70,23 @@ export default function Footer() {
         <div className="footer-top">
           <div className="container">
             <div className="row gy-4">
-              <div className="col-lg-5 col-md-6 footer-about">
+              <div className="col-lg-4 col-md-6 footer-about">
                 <Link href="/" className="logo d-flex align-items-center">
                   <span className="sitename">HG Technologies</span>
                 </Link>
-                <div className="footer-contact pt-3">
+                <div className="footer-contact pt-1 ">
+                  <div className="ftTitleAddress">Principal Office :</div>
                   <p>4th Floor, Pavilion, Tonk Road, Opp. SMS Stadium, Bapu Nagar, Jaipur, Rajasthan, 302015.</p>
+                   <hr/>
+                  <div className="ftTitleAddress">Registered Office :</div>
+                  <p>House No. A-2/3, Tilak Marg, C-Scheme, Jaipur, Rajasthan, India, 302005</p>
                   <p className="mt-3"><strong>Phone:</strong> <span>+ 91-8107143397</span></p>
                   <p><strong>Email:</strong> <a href="mailto:support@hgtechnologies.in">support@hgtechnologies.in</a></p>
                 </div>
-                <div className="social-links d-flex mt-4">
-
-                  <a href="https://www.linkedin.com/company/h-g-technology-services-private-limited/about/" target='_blank'><i className="bi bi-linkedin"></i></a>
-                </div>
+                
               </div>
 
-              <div className="col-lg-3 col-md-3 footer-links">
+              <div className="col-lg-2 col-md-3 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
                   <li><i className="bi bi-chevron-right"></i> <Link href="/">Home</Link></li>
@@ -109,6 +110,16 @@ export default function Footer() {
                 </ul>
               </div>
 
+              <div className="col-lg-3 col-md-6 footer-links">
+                <h4>Social Media Links </h4>
+               <div className="social-links d-flex ">
+                  <a href="https://www.linkedin.com/company/h-g-technology-services-private-limited/about/" target='_blank'><i className="bi bi-linkedin"></i></a>
+                    <a href="javascript:void(0);"><i className="bi bi-twitter-x"></i></a>
+                    <a href="javascript:void(0);"><i className="bi bi-facebook"></i></a>
+                    <a href="javascript:void(0);"><i className="bi bi-instagram"></i></a>
+                </div>
+              </div>
+
               {/* <div className="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Newsletter</h4>
 
@@ -127,6 +138,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
+  
 
         <div className="copyright">
           <div className="container text-center">
