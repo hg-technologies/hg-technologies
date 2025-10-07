@@ -109,7 +109,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="col-lg-4 col-md-12 footer-newsletter">
+              {/* <div className="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Newsletter</h4>
 
                 <form className="php-email-form" onSubmit={handleSubmit} >
@@ -122,7 +122,7 @@ export default function Footer() {
                 </form>
                 <p className="emailSub">I agree to receive promotional emails and updates from HG Technologies.
                   <Link href="/privacy-policy"> Privacy Policy</Link> &  <Link href="/terms-service">Terms of Service</Link></p>
-              </div>
+              </div> */}
 
             </div>
           </div>
