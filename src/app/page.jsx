@@ -222,8 +222,8 @@ counters.forEach(c => observer.observe(c));
                     <Image 
                       src={`/assets/images/${service.img}`} 
                       alt={service.title}
-                      width={70}
-                      height={70}
+                      width={85}
+                      height={85}
                     />
                   </div>
                   <a href="javascript:void(0);" className="stretched-link">

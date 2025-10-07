@@ -104,7 +104,7 @@ export default function Careers() {
 
       {/* Careers Content */}
       <section className="contact section contactFromBlog pb-0">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Career</h2>
           <p>Where Innovation Meets Opportunity</p>
         </div>

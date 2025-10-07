@@ -250,7 +250,7 @@ export default function MobileAppDevelopment() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="why-join">
+              <div className="why-join" data-aos="fade-up" data-aos-delay="100">
                 <h3>Boost Your Business with Advanced Mobile Apps</h3>
                 <p>Custom mobile solutions designed to enhance engagement and growth</p>
                 <Link className="btn btn-primary mt-3" href="/contact-us">
