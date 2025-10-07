@@ -31,7 +31,7 @@ export default function Footer() {
       };
 
       // Send API request
-      const response = await fetch('https://api-dev.buildsync.net/api/v1/hg-form', {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL_DEV, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -109,22 +109,20 @@ export default function Footer() {
                 </ul>
               </div>
 
-              {/* <div className="col-lg-4 col-md-12 footer-newsletter">
+              <div className="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Newsletter</h4>
 
                 <form className="php-email-form" onSubmit={handleSubmit} >
                   <div className="newsletter-form">
                     <input type="email" name="email" value={email} placeholder='Enter your email id' onChange={(e) => setEmail(e.target.value)}
                       disabled={isSubmitting} />
-                    <input type="submit" value={isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                    <input type="submit"  style={{ minWidth: '150px' }} value={isSubmitting ? 'Subscribing...' : 'Subscribe'}
                       disabled={isSubmitting} /></div>
-                  <div className="loading" style={{ display: isSubmitting ? 'block' : 'none' }}>Loading</div>
-                  <div className="error-message"></div>
                   <div className="sent-message" style={{ display: 'none' }}>Your subscription request has been sent. Thank you!</div>
                 </form>
                 <p className="emailSub">I agree to receive promotional emails and updates from HG Technologies.
                   <Link href="/privacy-policy"> Privacy Policy</Link> &  <Link href="/terms-service">Terms of Service</Link></p>
-              </div> */}
+              </div>
 
             </div>
           </div>

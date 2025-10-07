@@ -13,16 +13,46 @@ import 'swiper/css/pagination';
 export default function AboutUs() {
   
 
-  useEffect(() => {
-    // Initialize any required JavaScript for animations
-    // This would typically be handled by your custom.js or main.js
+    useEffect(() => {
+    // --- Number Counter Animation ---
+    const counters = document.querySelectorAll('.count');
+    const speed = 200;
+
+    const animateCount = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      const step = target / speed;
+
+      const update = () => {
+        count += step;
+        if (count < target) {
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target + (counter.dataset.suffix || '');
+        }
+      };
+      update();
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    });
+
+    counters.forEach(c => observer.observe(c));
   }, []);
 
+
   const stats = [
-    { label: "Senior & Expert Staff", value: "75%" },
-    { label: "Team Members", value: "50+" },
-    { label: "Clients On-board", value: "25+" },
-    { label: "Completed Projects", value: "25+" }
+    { label: "Senior & Expert Staff", value: 75, suffix: "%" },
+    { label: "Team Members", value: 50, suffix: "+" },
+    { label: "Clients On-board", value: 25, suffix: "+" },
+    { label: "Completed Projects", value: 25, suffix: "+" }
   ];
 
   const services = [
@@ -42,6 +72,7 @@ export default function AboutUs() {
       description: "Expert web & mobile app development solutions."
     }
   ];
+
 
   const achievements = [
     {
@@ -113,19 +144,26 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Stats Section */}
+       {/* Animated Stats Section */}
       <div className="hightlight-info">
         <div className="container">
           <ul>
             {stats.map((stat, index) => (
               <li key={index}>
                 <h6>{stat.label}</h6>
-                <p>{stat.value}</p>
+                <p>
+                  <span 
+                    className="count"
+                    data-target={stat.value}
+                    data-suffix={stat.suffix || ''}
+                  >0</span>
+                </p>
               </li>
             ))}
           </ul>
         </div>
       </div>
+
 
       {/* About Content Section */}
       <div className="aboutus-section homeAboutBg">

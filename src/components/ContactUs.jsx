@@ -1,12 +1,12 @@
 // components/ContactUs.jsx
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-
+import ReCAPTCHA from 'react-google-recaptcha';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -17,11 +17,16 @@ export default function ContactUs() {
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    captchaToken: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [phoneError, setPhoneError] = useState('');
+  const recaptchaRef = useRef(null);
+
+  const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_DEV;
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -54,14 +59,29 @@ export default function ContactUs() {
     return '';
   };
 
-  const handleSubmit = async (e) => {
+   // --- Handle CAPTCHA Verification ---
+  const handleCaptchaChange = (token) => {
+    setFormData((prev) => ({ ...prev, captchaToken: token }));
+  };
+
+  const handleCaptchaExpired = () => {
+    setFormData((prev) => ({ ...prev, captchaToken: '' }));
+  };
+
+  const handleSubmit = async (e) => { 
     e.preventDefault();
     setIsSubmitting(true);
 
+     if (!formData.captchaToken) {
+      toast.error('Please verify the reCAPTCHA before submitting.');
+      return;
+    }
+
+    
     try {
       // Validate all fields are filled
       const { name, email, phone, subject, message } = formData;
-      if (!name || !email || !subject || !phone || !message) {
+      if (!name || !email || !subject || !phone || !message  ) {
         toast.error('Please fill all required fields');
         setIsSubmitting(false);
         return;
@@ -81,13 +101,15 @@ export default function ContactUs() {
         type: "contact",
         name: formData.name,
         email: formData.email,
-        phone: formData.phone.replace(/\D/g, ''), // Clean phone number before sending
+        phone: formData.phone.replace(/\D/g, ''),
         subject: formData.subject,
-        message: formData.message
+        message: formData.message,
+        captcha: formData.captchaToken,
       };
+      
 
       // Send data to API
-      const response = await fetch('https://api-dev.buildsync.net/api/v1/hg-form', {
+      const response = await fetch(api_url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -108,8 +130,13 @@ export default function ContactUs() {
         email: '',
         phone: '',
         subject: '',
-        message: ''
+        message: '',
+        captchaToken: '',
       });
+
+     recaptchaRef.current?.reset();
+     setFormData((prev) => ({ ...prev, captchaToken: '' }));
+
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('There was an error sending your message. Please try again.');
@@ -132,8 +159,8 @@ export default function ContactUs() {
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
-                {/* <h2 className="titleManSlide">Connect, Collaborate, and Innovate  with Us</h2> */}
-                <h2 className="titleManSlide">Contact Us</h2>
+              {/* <h2 className="titleManSlide">Connect, Collaborate, and Innovate  with Us</h2> */}
+              <h2 className="titleManSlide">Contact Us</h2>
             </div>
           </div>
         </div>
@@ -274,8 +301,18 @@ export default function ContactUs() {
                           </div>
                         </div>
 
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
+                        onChange={handleCaptchaChange}
+                        onExpired={handleCaptchaExpired}
+                        onErrored={handleCaptchaExpired}
+                      />
+                    
+
+
                         <div className="col-md-12 text-end">
-                          <button className='btn btn-primary' type="submit" disabled={isSubmitting} style={{ minWidth: '150px' }}>
+                          <button className='btn btn-primary' type="submit" disabled={isSubmitting || !formData.captchaToken} style={{ minWidth: '150px' }}>
                             {isSubmitting ? 'Sending...' : 'Send Message'}
                           </button>
                         </div>

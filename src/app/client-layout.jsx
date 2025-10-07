@@ -1,6 +1,7 @@
-// app/layout.jsx
 'use client';
-
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,24 +9,32 @@ import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import ScrollToTop from '@/components/ScrollToTop';
 import ScrollProvider from '@/components/ScrollProvider';
-import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animations fire only once
+      easing: 'ease-in-out',
+    });
+  }, []);
+
   return (
     <html lang="en">
       <body className={`index-page ${isMenuOpen ? 'mobile-nav-active' : ''}`}>
         <ScrollProvider>
           <Header 
-            isMenuOpen={isMenuOpen} 
-            setIsMenuOpen={setIsMenuOpen} 
+          isMenuOpen={isMenuOpen} 
+          setIsMenuOpen={setIsMenuOpen} 
           />
-          <main className="main">
+          <main className="main" data-aos="fade-up">
             {children}
-            <Toaster 
+            
+           <Toaster 
               position="top-right"
               toastOptions={{
                 duration: 5000,

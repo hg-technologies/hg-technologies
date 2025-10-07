@@ -10,6 +10,7 @@
 @import url('../../public/assets/vendor/glightbox/css/glightbox.css');
 @import url('../../public/assets/vendor/glightbox/css/glightbox.min.css');
 @import url('../../public/assets/vendor/swiper/swiper-bundle.min.css');
+@import url('../../public/assets/vendor/aos/aos.css');
 
 /* Import Bootstrap LAST to ensure its styles take precedence */
 @import url('../../public/assets/vendor/bootstrap/css/bootstrap.min.css');
