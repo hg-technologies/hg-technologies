@@ -15,31 +15,31 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function ProductDevelopment() {
-   useEffect(() => {
-          AOS.init({
-            duration: 800,
-            once: true, // animations fire only once
-            easing: 'ease-in-out',
-          });
-        }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animations fire only once
+      easing: 'ease-in-out',
+    });
+  }, []);
 
   return (
     <>
       {/* Hero Section */}
       <section id="hero" className="hero aboutUsHero section dark-background">
-        <Image 
-          src="/assets/images/product_bg.jpg" 
-          alt="Product Development" 
+        <Image
+          src="/assets/images/product_bg.jpg"
+          alt="Product Development"
           fill
           style={{ objectFit: 'cover' }}
           data-aos="fade-in"
-        />  
-        
+        />
+
         <div className="container">
           <div className="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
             <div className="col-xl-7 col-lg-8">
               <h2>Product Development</h2>
-            </div>        
+            </div>
           </div>
         </div>
       </section>
@@ -52,35 +52,35 @@ export default function ProductDevelopment() {
               <div className="section-title">
                 <h2>Product Development</h2>
                 <p>End-to-End Customization</p>
-              </div>              
-                  <ul className="ticklist">
-                    <li>
-                      <span>Feature Discovery & Documentation</span>
-                      - Every project begins with detailed analysis and documentation of all functional and non-functional features to ensure full clarity and alignment.
-                    </li>
-                    <li>
-                      <span>Wireframing & Prototyping</span>
-                      - Early-stage wireframes and prototypes define user flow, structure, and functionality—ensuring efficient design and development.
-                    </li>
-                    <li>
-                      <span>Intuitive UI/UX Design</span>
-                      - User-centric designs crafted for clarity, engagement, and seamless navigation across all devices, enhancing the overall experience.
-                    </li>
-                    <li>
-                      <span>Agile & Scalable Development</span>
-                      - A robust agile process paired with modern tech stacks delivers secure, high-performance, and scalable digital products.
-                    </li>
-                  </ul>
-             </div>
-            
+              </div>
+              <ul className="ticklist">
+                <li>
+                  <span>Feature Discovery & Documentation</span>
+                  - Every project begins with detailed analysis and documentation of all functional and non-functional features to ensure full clarity and alignment.
+                </li>
+                <li>
+                  <span>Wireframing & Prototyping</span>
+                  - Early-stage wireframes and prototypes define user flow, structure, and functionality—ensuring efficient design and development.
+                </li>
+                <li>
+                  <span>Intuitive UI/UX Design</span>
+                  - User-centric designs crafted for clarity, engagement, and seamless navigation across all devices, enhancing the overall experience.
+                </li>
+                <li>
+                  <span>Agile & Scalable Development</span>
+                  - A robust agile process paired with modern tech stacks delivers secure, high-performance, and scalable digital products.
+                </li>
+              </ul>
+            </div>
+
             <div className="col-lg-6 col-md-12 align-self-center ">
               <div className="text-center ">
-              <img 
-                src="/assets/images/product_img.jpg" 
-                className="img-fluid radiusImg" 
-                alt="Product Development"
-               style={{width:"70%"}}
-              />
+                <img
+                  src="/assets/images/product_img.jpg"
+                  className="img-fluid radiusImg"
+                  alt="Product Development"
+                  style={{ width: "70%" }}
+                />
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function ProductDevelopment() {
           <div className="section-title">
             <h2>SERVICES</h2>
             <p>Product Customisation Solutions</p>
-          </div>          
+          </div>
           <div className="row">
             {[
               {
@@ -129,9 +129,9 @@ export default function ProductDevelopment() {
             ].map((service, index) => (
               <div key={index} className="col-lg-4 col-md-6">
                 <div className="ser-card-wt">
-                  <Image 
-                    src={service.icon} 
-                    className="img-fluid" 
+                  <Image
+                    src={service.icon}
+                    className="img-fluid"
                     alt={service.title}
                     width={70}
                     height={70}
@@ -146,7 +146,7 @@ export default function ProductDevelopment() {
       </div>
 
       {/* Call to Action Section */}
-      <section id="why-join" className="" style={{backgroundImage: "url(/assets/images/cloud_dev_bg.jpg)"}}>
+      <section id="why-join" className="" style={{ backgroundImage: "url(/assets/images/cloud_dev_bg.jpg)" }}>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
             <div className="col-md-12">
@@ -159,59 +159,84 @@ export default function ProductDevelopment() {
               </div>
             </div>
           </div>
-        </div>         
-      </section>
-
-        {/* Clients Section */}
-      <section id="clients" className="clients section">
-        <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <Swiper
-            loop={true}
-            speed={600}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            slidesPerView="auto"
-            pagination={{
-              el: '.swiper-pagination',
-              type: 'bullets',
-              clickable: true,
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-              480: {
-                slidesPerView: 3,
-                spaceBetween: 60,
-              },
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 80,
-              },
-              992: {
-                slidesPerView: 5,
-                spaceBetween: 120,
-              },
-            }}
-            modules={[Pagination, Autoplay]}
-            className="init-swiper"
-          >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-              <SwiperSlide key={item}>
-                <img 
-                  src={`/assets/images/clients/client-${item}.png`} 
-                  className="img-fluid" 
-                  alt={`Client ${item}`} 
-                />
-              </SwiperSlide>
-            ))}
-            <div className="swiper-pagination"></div>
-          </Swiper>
         </div>
       </section>
+
+   {/* Clients Section */}
+<section id="clients" className="clients section">
+  <div className="container" data-aos="fade-up" data-aos-delay="100">
+    <Swiper
+      loop={true}
+      speed={600}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      slidesPerView="auto"
+      pagination={{
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      }}
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 80,
+        },
+        992: {
+          slidesPerView: 5,
+          spaceBetween: 120,
+        },
+      }}
+      modules={[Pagination, Autoplay]}
+      className="init-swiper"
+    >
+      {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+        const clientLinks = {
+          5: "https://www.hginfra.com/",
+          6: "https://www.natriel.com/",
+        };
+        const link = clientLinks[item];
+
+        return (
+          <SwiperSlide key={item}>
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={`/assets/images/clients/client-${item}.png`}
+                  className="img-fluid"
+                  alt={`Client ${item}`}
+                  style={{ cursor: "pointer" }}
+                />
+              </a>
+            ) : (
+              <img
+                src={`/assets/images/clients/client-${item}.png`}
+                className="img-fluid"
+                alt={`Client ${item}`}
+              />
+            )}
+          </SwiperSlide>
+        );
+      })}
+      <div className="swiper-pagination"></div>
+    </Swiper>
+  </div>
+</section>
+
+
     </>
   );
 }
