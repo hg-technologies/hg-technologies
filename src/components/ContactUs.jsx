@@ -182,39 +182,34 @@ export default function ContactUs() {
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-12">
+                <div className="col-lg-12" >
                   <div className="contactUSBlog">
                     {/* Contact Info */}
                     <div className="contactInfo">
                       <div className="col-lg-12">
-                        <div className="row">
+                        <div className="row" data-aos="fade-up" data-aos-delay="100">
                           <div className="col-lg-5">
-                            <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <div className="info-item d-flex">
                               <i className="bi bi-geo-alt flex-shrink-0"></i>
                               <div>
-                                <h3>Principal Office :</h3>
-                                <p>HG Technologies, 4th Floor, Pavilion, Tonk Road, Opp. SMS Stadium, Bapu Nagar, Jaipur, Rajasthan, 302015.</p>
-
-                                <br />
-                                <h3>Registered Office :</h3>
-                                <p>House No. A-2/3, Tilak Marg, C-Scheme, Jaipur, Rajasthan, India, 302005</p>
-
+                                <h3>Office Address :</h3>
+                                <p>HG Technologies, 4th Floor Pavilion, SB-56, Tonk Road, Opp. Sawai Mansingh Stadium,Bapu Nagar, Jaipur, Rajasthan, India, 302015</p>   
                               </div>
                             </div>
                           </div>
 
                           <div className="col-lg-4">
-                            <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <div className="info-item d-flex">
                               <i className="bi bi-envelope flex-shrink-0"></i>
                               <div>
                                 <h3>For Business Enquiries :</h3>
-                                <p><a href="mailto:support@hgtechnologies.in">support@hgtechnologies.in</a></p>
+                                <p><a href="mailto:support@hgtechnologies.in"> support@hgtechnologies.in</a></p>
                               </div>
                             </div>
                           </div>
 
                           <div className="col-lg-3">
-                            <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <div className="info-item d-flex">
                               <i className="bi bi-telephone flex-shrink-0"></i>
                               <div>
                                 <h3>Call Us : </h3>
@@ -227,6 +222,7 @@ export default function ContactUs() {
                     </div>
 
                     {/* Contact Form */}
+                    <div data-aos="fade-up" data-aos-delay="100">
                     <h2>Connect with us</h2>
                     <p>Fill out the form and our experts will contact you within 24 Hrs.</p>
 
@@ -328,6 +324,7 @@ export default function ContactUs() {
                         </div>
                       </div>
                     </form>
+                    </div>
 
                   </div>
                 </div>

@@ -75,11 +75,9 @@ export default function Footer() {
                   <span className="sitename">HG Technologies</span>
                 </Link>
                 <div className="footer-contact pt-1 ">
-                  <div className="ftTitleAddress">Principal Office :</div>
-                  <p>4th Floor, Pavilion, Tonk Road, Opp. SMS Stadium, Bapu Nagar, Jaipur, Rajasthan, 302015.</p>
-                   <hr/>
-                  <div className="ftTitleAddress">Registered Office :</div>
-                  <p>House No. A-2/3, Tilak Marg, C-Scheme, Jaipur, Rajasthan, India, 302005</p>
+                  <div className="ftTitleAddress">Office Address :</div>
+                  <p>4th Floor Pavilion, SB-56, Tonk Road, Opp. Sawai Mansingh Stadium,Bapu Nagar, Jaipur, Rajasthan, India, 302015</p>
+                  
                   <p className="mt-3"><strong>Phone:</strong> <span>+ 91-8107143397</span></p>
                   <p><strong>Email:</strong> <a href="mailto:support@hgtechnologies.in">support@hgtechnologies.in</a></p>
                 </div>
