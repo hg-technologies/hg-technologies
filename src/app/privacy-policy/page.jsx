@@ -5,7 +5,7 @@
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-
+import { useState, useEffect } from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
