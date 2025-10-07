@@ -93,5 +93,6 @@
 	.abDetails p{text-align: start;}
 	.normalText p{text-align: start;}
 	.normalText ul li{text-align: start;}
- 
+	.why-join p {text-align:start} 
+	.footer .copyright p {max-width: 74%;text-align: center;margin: auto;}
 }
