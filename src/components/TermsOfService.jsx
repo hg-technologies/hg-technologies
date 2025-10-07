@@ -11,6 +11,9 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function TermsOfService() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -19,6 +22,14 @@ export default function TermsOfService() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+     useEffect(() => {
+            AOS.init({
+              duration: 800,
+              once: true, // animations fire only once
+              easing: 'ease-in-out',
+            });
+          }, []);
 
   const services = [
     'AI Project Development',
@@ -61,7 +72,7 @@ export default function TermsOfService() {
 
       {/* Terms Content */}
       <section id="contact" className="contact section contactFromBlog pb-0">
-        <div className="container section-title aos-init aos-animate" data-aos="fade-up">
+        <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Terms of Service</h2>
 
           <div className="normalText">

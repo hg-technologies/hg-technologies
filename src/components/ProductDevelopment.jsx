@@ -11,11 +11,17 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function ProductDevelopment() {
-  useEffect(() => {
-    // Initialize any required JavaScript functionality
-    // This would typically include animations, etc.
-  }, []);
+   useEffect(() => {
+          AOS.init({
+            duration: 800,
+            once: true, // animations fire only once
+            easing: 'ease-in-out',
+          });
+        }, []);
 
   return (
     <>
@@ -141,7 +147,7 @@ export default function ProductDevelopment() {
 
       {/* Call to Action Section */}
       <section id="why-join" className="" style={{backgroundImage: "url(/assets/images/cloud_dev_bg.jpg)"}}>
-        <div className="container">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row">
             <div className="col-md-12">
               <div className="why-join">

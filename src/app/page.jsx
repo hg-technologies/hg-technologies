@@ -6,10 +6,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
+    useEffect(() => {
+      AOS.init({
+        duration: 800,
+        once: true, // animations fire only once
+        easing: 'ease-in-out',
+      });
+    }, []);
 
   useEffect(() => {
     // Video autoplay script for hero section
