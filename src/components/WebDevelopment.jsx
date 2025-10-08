@@ -90,7 +90,7 @@ export default function WebDevelopment() {
       <div className="develop-section">
         <div className="container useTechnologies" data-aos="fade-up" data-aos-delay="100">
           <div className="section-title">
-            <h2>Web Development Technologies</h2>
+            <h2>Web Technologies</h2>
             <p>Future-ready websites powered by the latest tech.</p>
           </div>
 
