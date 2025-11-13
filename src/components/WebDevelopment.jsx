@@ -127,7 +127,7 @@ export default function WebDevelopment() {
                 description: 'We bring designs to life with clean HTML5 and modern CSS, ensuring your website looks professional and works on all devices.'
               }
             ].map((tech, index) => (
-              <div key={index} className="col-lg-6 col-md-12">
+              <div key={index} className="col-lg-4 col-md-12">
                 <div className="ser-card-wt">
                   <Image
                     src={tech.icon}
@@ -308,6 +308,7 @@ export default function WebDevelopment() {
         const clientLinks = {
           5: "https://www.hginfra.com/",
           6: "https://www.natriel.com/",
+          7: "https://hgholdings.in/",
           1: "https://www.jivocare.com/",
         };
         const link = clientLinks[item];

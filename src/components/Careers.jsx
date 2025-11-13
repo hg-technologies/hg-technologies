@@ -207,6 +207,7 @@ export default function Careers() {
               const clientLinks = {
                 5: "https://www.hginfra.com/",
                 6: "https://www.natriel.com/",
+                7: "https://hgholdings.in/",
                 1: "https://www.jivocare.com/",
               };
               const link = clientLinks[item];
