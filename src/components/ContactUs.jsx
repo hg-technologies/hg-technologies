@@ -213,7 +213,7 @@ export default function ContactUs() {
                               <i className="bi bi-telephone flex-shrink-0"></i>
                               <div>
                                 <h3>Call Us : </h3>
-                                <p>+91-8107143397</p>
+                                <p>+91-9799957384</p>
                               </div>
                             </div>
                           </div>

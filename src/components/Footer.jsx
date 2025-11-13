@@ -78,7 +78,7 @@ export default function Footer() {
                   <div className="ftTitleAddress">Office Address :</div>
                   <p>4th Floor Pavilion, SB-56, Tonk Road, Opp. Sawai Mansingh Stadium,Bapu Nagar, Jaipur, Rajasthan, India, 302015</p>
                   
-                  <p className="mt-3"><strong>Phone:</strong> <span>+ 91-8107143397</span></p>
+                  <p className="mt-3"><strong>Phone:</strong> <span>+ 91-9799957384</span></p>
                   <p><strong>Email:</strong> <a href="mailto:support@hgtechnologies.in">support@hgtechnologies.in</a></p>
                 </div>
                 
