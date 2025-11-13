@@ -83,6 +83,7 @@
 	.logo.me-auto {margin-left: 2px !important;}
 	.normalText p{ font-size: 16px !important; line-height: 22px !important;;}
 	.footerBg {padding-top: 40px;}
+	.captchaBlog{ margin:10px 0 15px 0 !important;}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {

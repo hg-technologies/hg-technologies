@@ -2306,4 +2306,10 @@ background-color: #14173b  !important ;
 .footer-about p{font-size: 12px; color: color-mix(in srgb, var(--default-color), transparent 30%); font-weight: 300;}
 .currentOpeningsBlog ul li div{width: 85%;}
 
-.faqDetails{}
+
+
+
+
+
+.rc-anchor-normal {width: 287px !important;}
+.rc-anchor-normal .rc-anchor-content {width: 192px !important;}

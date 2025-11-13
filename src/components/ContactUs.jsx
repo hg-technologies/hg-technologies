@@ -307,13 +307,14 @@ export default function ContactUs() {
                           </div>
                         </div>
 
+                      <div className="col-md-12 captchaBlog">
                       <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
                         onChange={handleCaptchaChange}
                         onExpired={handleCaptchaExpired}
                         onErrored={handleCaptchaExpired}
-                      />
+                      /></div>
                     
 
 
