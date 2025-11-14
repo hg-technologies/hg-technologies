@@ -112,15 +112,14 @@ export default function Footer() {
                 <h4>Social Media Links </h4>
                <div className="social-links d-flex ">
                   <a href="https://www.linkedin.com/company/h-g-technology-services-private-limited/about/" target='_blank'><i className="bi bi-linkedin"></i></a>
-                    <a href="javascript:void(0);"><i className="bi bi-twitter-x"></i></a>
-                    <a href="javascript:void(0);"><i className="bi bi-facebook"></i></a>
-                    <a href="javascript:void(0);"><i className="bi bi-instagram"></i></a>
+                  <a href="https://x.com/HG_technologies" target='_blank'><i className="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61582211341370" target='_blank'><i className="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/hg_technologies_/" target='_blank'><i className="bi bi-instagram"></i></a>
                 </div>
               </div>
 
               {/* <div className="col-lg-4 col-md-12 footer-newsletter">
                 <h4>Newsletter</h4>
-
                 <form className="php-email-form" onSubmit={handleSubmit} >
                   <div className="newsletter-form">
                     <input type="email" name="email" value={email} placeholder='Enter your email id' onChange={(e) => setEmail(e.target.value)}
