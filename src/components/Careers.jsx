@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useRouter } from 'next/navigation';
 
 export default function Careers() {
   useEffect(() => {
@@ -21,6 +22,9 @@ export default function Careers() {
       easing: 'ease-in-out',
     });
   }, []);
+
+
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -121,14 +125,13 @@ export default function Careers() {
                         <p>Experience : {job.experience}</p>
                         <p>{job.description}</p>
                       </div>
-                      <a
+                      <button
                         className="btn btn-primary"
-                        href="https://hgholdings.keka.com/careers/"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        onClick={() => router.push(`/careers/apply?position=${encodeURIComponent(job.title)}`)}
                       >
                         Apply Now
-                      </a>
+                      </button>
+
                     </li>
                   ))}
                 </ul>
