@@ -84,6 +84,7 @@
 	.normalText p{ font-size: 16px !important; line-height: 22px !important;;}
 	.footerBg {padding-top: 40px;}
 	.captchaBlog{ margin:10px 0 15px 0 !important;}
+	.imgMHide{display: none;}
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -93,4 +94,5 @@
 	.normalText ul li{text-align: start;}
 	.why-join p {text-align:start} 
 	.footer .copyright p {max-width: 74%;text-align: center;margin: auto;}
+
 }

@@ -181,19 +181,17 @@ export default function ApplyJob() {
             </section>
 
             {/* FORM SECTION */}
-            <section id="contact" className="contact bgIcons section contactFromBlog pb-0">
+            <section id="contact" className="contact  section contactFromBlog pb-0">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="contactUSBlog" style={{ background: "#0c112b" }}>
-                                <p style={{ color: "#fff" }}>
-                                    Please provide as much information as possible and we'll contact you within 24 hours for the next steps.
-                                </p>
+                               
 
                                 <form onSubmit={handleSubmit}>
                                     <div className="row">
                                         {/* IMAGE */}
-                                        <div className="col-md-6">
+                                        <div className="col-md-6 imgMHide">
                                             <Image
                                                 src={`/assets/images/jobapply.png`}
                                                 alt="Job Apply"
@@ -205,63 +203,34 @@ export default function ApplyJob() {
 
                                         {/* FORM FIELDS */}
                                         <div className="col-md-6">
+                                         <div className="row">
+
+
+                                            <div className="col-md-12">
+                                                 <p style={{ color: "#fff" }}>
+                                                        Please provide as much information as possible and we'll contact you within 24 hours for the next steps.
+                                                    </p>
+                                            </div>
 
                                             {/* NAME */}
+                                             <div className="col-md-12">
                                             <div className="mb-3">
                                                 <label className="text-white">Name <span className="text-danger">*</span>  </label>
                                                 <input type="text" className="form-control" name="name" value={form.name} onChange={handleChange} required />
                                             </div>
+                                            </div>
 
                                             {/* EMAIL */}
+                                             <div className="col-md-12">
                                             <div className="mb-3">
                                                 <label className="text-white">Email <span className="text-danger">*</span> </label>
                                                 <input type="email" className="form-control" name="email" value={form.email} onChange={handleChange} required />
                                                 {errors.email && <p className="text-danger">{errors.email}</p>}
                                             </div>
-
-                                            {/* EXPERIENCE */}
-                                            <div className="mb-3">
-                                                <label className="text-white">Years of Experience <span className="text-danger">*</span> </label>
-                                                <input type="text" className="form-control" name="experience" value={form.experience} onChange={handleChange} required />
-                                                {errors.experience && <p className="text-danger">{errors.experience}</p>}
-                                            </div>
-
-                                            {/* CTC */}
-                                            <div className="mb-3">
-                                                <label className="text-white">CTC <span className="text-danger">*</span> </label>
-                                                <input type="text" className="form-control" name="ctc" value={form.ctc} onChange={handleChange} required />
-                                                {errors.ctc && <p className="text-danger">{errors.ctc}</p>}
-                                            </div>
-
-                                            {/* ECTC */}
-                                            <div className="mb-3">
-                                                <label className="text-white">Expected CTC (ECTC) <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" name="ectc" value={form.ectc} onChange={handleChange} required />
-                                                {errors.ectc && <p className="text-danger">{errors.ectc}</p>}
-                                            </div>
-
-                                            {/* NOTICE PERIOD */}
-                                            <div className="mb-3">
-                                                <label className="text-white">Notice Period <span className="text-danger">*</span></label>
-                                                <input type="text" className="form-control" name="notice_period" value={form.notice_period} onChange={handleChange} required />
-                                                {errors.notice_period && <p className="text-danger">{errors.notice_period}</p>}
-                                            </div>
-
-                                            {/* JOB POSITION */}
-                                            <div className="mb-3">
-                                                <label className="text-white">Apply For <span className="text-danger">*</span></label>
-                                                <select className="form-control" name="position" value={form.position} onChange={handleChange} required>
-                                                    <option value="">Select Position</option>
-                                                    <option value="UI/UX Designer (1)">UI/UX Designer</option>
-                                                    <option value="Business Analyst (2)">Business Analyst</option>
-                                                    <option value="Full Stack Developer (3)">Full Stack Developer</option>
-                                                    <option value="Quality Analyst (2)">Quality Analyst</option>
-                                                    <option value="Mobile Developer (1)">Mobile Developer</option>
-                                                </select>
-                                                {errors.position && <p className="text-danger">{errors.position}</p>}
                                             </div>
 
                                             {/* PHONE */}
+                                             <div className="col-md-6">
                                             <div className="mb-3">
                                                 <label className="text-white">Phone Number <span className="text-danger">*</span></label>
                                                 <input
@@ -281,13 +250,67 @@ export default function ApplyJob() {
 
                                                 {errors.phone && <p className="text-danger">{errors.phone}</p>}
                                             </div>
+                                            </div>
 
-                                            <div className="d-flex justify-content-between align-items-center">
+
+                                            {/* EXPERIENCE */}
+                                            <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="text-white">Years of Experience <span className="text-danger">*</span> </label>
+                                                <input type="text" className="form-control" name="experience" value={form.experience} onChange={handleChange} required />
+                                                {errors.experience && <p className="text-danger">{errors.experience}</p>}
+                                            </div></div>
+
+                                            {/* CTC */}
+                                             <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="text-white">CTC <span className="text-danger">*</span> </label>
+                                                <input type="text" className="form-control" name="ctc" value={form.ctc} onChange={handleChange} required />
+                                                {errors.ctc && <p className="text-danger">{errors.ctc}</p>}
+                                            </div>
+                                            </div>
+
+                                            {/* ECTC */}
+                                              <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="text-white">Expected CTC (ECTC) <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" name="ectc" value={form.ectc} onChange={handleChange} required />
+                                                {errors.ectc && <p className="text-danger">{errors.ectc}</p>}
+                                            </div></div>
+
+                                            {/* NOTICE PERIOD */}
+                                            <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="text-white">Notice Period <span className="text-danger">*</span></label>
+                                                <input type="text" className="form-control" name="notice_period" value={form.notice_period} onChange={handleChange} required />
+                                                {errors.notice_period && <p className="text-danger">{errors.notice_period}</p>}
+                                            </div>
+                                            </div>
+
+                                            {/* JOB POSITION */}
+                                            <div className="col-md-6">
+                                            <div className="mb-3">
+                                                <label className="text-white">Apply For <span className="text-danger">*</span></label>
+                                                <select className="form-control" name="position" value={form.position} onChange={handleChange} required>
+                                                    <option value="">Select Position</option>
+                                                    <option value="UI/UX Designer (1)">UI/UX Designer</option>
+                                                    <option value="Business Analyst (2)">Business Analyst</option>
+                                                    <option value="Full Stack Developer (3)">Full Stack Developer</option>
+                                                    <option value="Quality Analyst (2)">Quality Analyst</option>
+                                                    <option value="Mobile Developer (1)">Mobile Developer</option>
+                                                </select>
+                                                {errors.position && <p className="text-danger">{errors.position}</p>}
+                                            </div>
+                                            </div>
+
+                                              <div className="col-md-12">
+                                           
 
                                                 {/* Resume Upload */}
-                                                <div style={{ width: "65%" }}>
+                                                
+                                                 <div>
                                                     <label className="text-white">Upload Resume <span className="text-danger">*</span></label>
-                                                    <input
+                                                    <input style={{padding:"12px"}}
                                                         type="file"
                                                         className="form-control"
                                                         accept="application/pdf"
@@ -304,17 +327,22 @@ export default function ApplyJob() {
                                                     ) : null}
 
 
+                                               
+                                                </div>
                                                 </div>
 
                                                 {/* Apply Button */}
-                                                <div>
+                                                
+                                                <div className="col-md-12">
+                                                    <div className="text-end">
                                                     <button className="btn btn-primary mt-4" type="submit">
                                                         Apply Now
                                                     </button>
+                                                    </div>
                                                 </div>
 
-                                            </div>
-
+                                            
+                                             </div>
 
                                         </div>
                                     </div>
@@ -331,7 +359,7 @@ export default function ApplyJob() {
                 </div>
             </section>
 
-            {/* Why Join Section */}
+             {/* Why Join Section */}
             <section
                 id="why-join"
                 className=""
