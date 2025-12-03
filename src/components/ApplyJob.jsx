@@ -359,38 +359,6 @@ export default function ApplyJob() {
                 </div>
             </section>
 
-             {/* Why Join Section */}
-            <section
-                id="why-join"
-                className=""
-                style={{ backgroundImage: "url(/assets/images/why-join.jpg)" }}
-            >
-                <div className="container" data-aos="fade-up" data-aos-delay="100">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="why-join">
-                                <h3>Why join <br /> <span>HG Technologies? </span></h3>
-                                <p>
-                                    At HG Technologies, we take pride in our exceptional team of over 50+
-                                    highly motivated professionals. Our employees are experts in advanced
-                                    technologies and trained in global communication.
-                                </p>
-                                <p>
-                                    We emphasize continuous learning and innovation. From project initiation
-                                    to delivery, excellence remains our core focus. Our commitment extends
-                                    beyond delivery with reliable & ongoing support.
-                                </p>
-
-                                <a className="btn btn-primary mt-3" href="/contact-us">
-                                    Share Your Requirements
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
             {/* Clients Section */}
             <section id="clients" className="clients section">
                 <div className="container" data-aos="fade-up" data-aos-delay="100">
