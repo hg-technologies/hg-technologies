@@ -8,6 +8,12 @@ import { useSearchParams } from "next/navigation";
 import { validateResumeFile, uploadResume } from "../app/services/uploadService.js";
 import { useRouter } from "next/navigation";
 import toast from 'react-hot-toast';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 
 export default function ApplyJob() {
     useEffect(() => {
@@ -314,9 +320,98 @@ export default function ApplyJob() {
                                     </div>
                                 </form>
 
+
+
+
+
+
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Why Join Section */}
+            <section
+                id="why-join"
+                className=""
+                style={{ backgroundImage: "url(/assets/images/why-join.jpg)" }}
+            >
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="why-join">
+                                <h3>Why join <br /> <span>HG Technologies? </span></h3>
+                                <p>
+                                    At HG Technologies, we take pride in our exceptional team of over 50+
+                                    highly motivated professionals. Our employees are experts in advanced
+                                    technologies and trained in global communication.
+                                </p>
+                                <p>
+                                    We emphasize continuous learning and innovation. From project initiation
+                                    to delivery, excellence remains our core focus. Our commitment extends
+                                    beyond delivery with reliable & ongoing support.
+                                </p>
+
+                                <a className="btn btn-primary mt-3" href="/contact-us">
+                                    Share Your Requirements
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* Clients Section */}
+            <section id="clients" className="clients section">
+                <div className="container" data-aos="fade-up" data-aos-delay="100">
+                    <Swiper
+                        loop={true}
+                        speed={600}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        slidesPerView="auto"
+                        pagination={{ el: ".swiper-pagination", type: "bullets", clickable: true }}
+                        breakpoints={{
+                            320: { slidesPerView: 2, spaceBetween: 40 },
+                            480: { slidesPerView: 3, spaceBetween: 60 },
+                            640: { slidesPerView: 4, spaceBetween: 80 },
+                            992: { slidesPerView: 5, spaceBetween: 120 },
+                        }}
+                        modules={[Pagination, Autoplay]}
+                        className="init-swiper"
+                    >
+                        {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+                            const clientLinks = {
+                                5: "https://www.hginfra.com/",
+                                6: "https://www.natriel.com/",
+                                7: "https://hgholdings.in/",
+                                1: "https://www.jivocare.com/",
+                            };
+                            const link = clientLinks[item];
+
+                            return (
+                                <SwiperSlide key={item}>
+                                    {link ? (
+                                        <a href={link} target="_blank" rel="noopener noreferrer">
+                                            <img
+                                                src={`/assets/images/clients/client-${item}.png`}
+                                                className="img-fluid"
+                                                alt={`Client ${item}`}
+                                            />
+                                        </a>
+                                    ) : (
+                                        <img
+                                            src={`/assets/images/clients/client-${item}.png`}
+                                            className="img-fluid"
+                                            alt={`Client ${item}`}
+                                        />
+                                    )}
+                                </SwiperSlide>
+                            );
+                        })}
+                        <div className="swiper-pagination"></div>
+                    </Swiper>
                 </div>
             </section>
         </>
