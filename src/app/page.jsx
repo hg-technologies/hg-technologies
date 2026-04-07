@@ -373,8 +373,8 @@ counters.forEach(c => observer.observe(c));
                     width={100}
                     height={100}
                   />
-                  <h3>Harshwardhan Singh Choudhary </h3>
-                  <h4>(MD, HG Technologies)</h4>
+                  <h3>Harshvardhan Singh </h3>
+                  <h4>(Director, HG Technologies)</h4>
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
                     <span>Technologies today is not just a tool, it's a catalyst for business evolution. Our team is dedicated to developing robust 
