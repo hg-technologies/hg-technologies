@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+.idea/
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js build output
+.next/
+out/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+.babel-cache/
+.cache/
+.next/
+
+# Optional: OS-specific
+Thumbs.db
+ehthumbs.db
+*.swp
+
+# Optional: TypeScript
+*.tsbuildinfo
+
+# Optional: Mac/Linux system files
+*.sublime-workspace
+
+# Optional: vercel (if using Vercel for deployment)
+.vercel/
+
+# Optional: testing coverage
+coverage/
+
+# Optional: local database
+*.sqlite
+*.sqlite-journal
+
+# Optional: IDE settings
+*.code-workspace
+
