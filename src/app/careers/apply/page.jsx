@@ -1,13 +1,10 @@
 import { Suspense } from "react";
 import ApplyJob from "../../../components/ApplyJob.jsx";
-
-export const metadata = {
-  title: "Apply Job - HG Technologies",
-};
+import Careers from '@/components/Careers';
 
 export default function ApplyJobPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Careers />}>
       <ApplyJob />
     </Suspense>
   );
