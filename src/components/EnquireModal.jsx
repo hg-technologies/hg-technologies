@@ -136,7 +136,7 @@ export default function EnquireModal({ isOpen, onClose }) {
       };
       
       // Send API request
-      const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL_PROD, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL_DEV}/hg-form`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

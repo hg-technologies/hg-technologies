@@ -1,12 +1,12 @@
 // components/ContactUs.jsx
 'use client';
 
-import { useState, useRef , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import toast from 'react-hot-toast';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -19,13 +19,12 @@ export default function ContactUs() {
     email: '',
     phone: '',
     subject: '',
-    message: '',
-    captchaToken: ''
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [phoneError, setPhoneError] = useState('');
-  const recaptchaRef = useRef(null);
+  // const recaptchaRef = useRef(null);
 
   const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_PROD;
 
@@ -44,13 +43,13 @@ export default function ContactUs() {
     }));
   };
 
-      useEffect(() => {
-          AOS.init({
-            duration: 800,
-            once: true, // animations fire only once
-            easing: 'ease-in-out',
-          });
-        }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true, // animations fire only once
+      easing: 'ease-in-out',
+    });
+  }, []);
 
   const validatePhone = (phone) => {
     // Remove any non-digit characters
@@ -69,29 +68,29 @@ export default function ContactUs() {
     return '';
   };
 
-   // --- Handle CAPTCHA Verification ---
-  const handleCaptchaChange = (token) => {
-    setFormData((prev) => ({ ...prev, captchaToken: token }));
-  };
+  //  // --- Handle CAPTCHA Verification ---
+  // const handleCaptchaChange = (token) => {
+  //   setFormData((prev) => ({ ...prev, captchaToken: token }));
+  // };
 
-  const handleCaptchaExpired = () => {
-    setFormData((prev) => ({ ...prev, captchaToken: '' }));
-  };
+  // const handleCaptchaExpired = () => {
+  //   setFormData((prev) => ({ ...prev, captchaToken: '' }));
+  // };
 
-  const handleSubmit = async (e) => { 
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-     if (!formData.captchaToken) {
-      toast.error('Please verify the reCAPTCHA before submitting.');
-      return;
-    }
+    //  if (!formData.captchaToken) {
+    //   toast.error('Please verify the reCAPTCHA before submitting.');
+    //   return;
+    // }
 
-    
+
     try {
       // Validate all fields are filled
       const { name, email, phone, subject, message } = formData;
-      if (!name || !email || !subject || !phone || !message  ) {
+      if (!name || !email || !subject || !phone || !message) {
         toast.error('Please fill all required fields');
         setIsSubmitting(false);
         return;
@@ -114,12 +113,11 @@ export default function ContactUs() {
         phone: formData.phone.replace(/\D/g, ''),
         subject: formData.subject,
         message: formData.message,
-        captcha: formData.captchaToken,
       };
-      
+
 
       // Send data to API
-      const response = await fetch(api_url, {
+      const response = await fetch(`${api_url}/hg-form`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -140,12 +138,11 @@ export default function ContactUs() {
         email: '',
         phone: '',
         subject: '',
-        message: '',
-        captchaToken: '',
+        message: ''
       });
 
-     recaptchaRef.current?.reset();
-     setFormData((prev) => ({ ...prev, captchaToken: '' }));
+      // recaptchaRef.current?.reset();
+      setFormData((prev) => ({ ...prev, captchaToken: '' }));
 
     } catch (error) {
       console.error('Form submission error:', error);
@@ -193,7 +190,7 @@ export default function ContactUs() {
                               <i className="bi bi-geo-alt flex-shrink-0"></i>
                               <div>
                                 <h3>Office Address :</h3>
-                                <p>HG Technologies, 4th Floor Pavilion, SB-56, Tonk Road, Opp. Sawai Mansingh Stadium,Bapu Nagar, Jaipur, Rajasthan, India, 302015</p>   
+                                <p>HG Technologies, 4th Floor Pavilion, SB-56, Tonk Road, Opp. Sawai Mansingh Stadium,Bapu Nagar, Jaipur, Rajasthan, India, 302015</p>
                               </div>
                             </div>
                           </div>
@@ -223,108 +220,113 @@ export default function ContactUs() {
 
                     {/* Contact Form */}
                     <div data-aos="fade-up" data-aos-delay="100">
-                    <h2>Connect with us</h2>
-                    <p>Fill out the form and our experts will contact you within 24 Hrs.</p>
+                      <h2>Connect with us</h2>
+                      <p>Fill out the form and our experts will contact you within 24 Hrs.</p>
 
-                    <form onSubmit={handleSubmit} className="contact-form" data-aos="fade-up" data-aos-delay="200">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="mb-3">
-                            <label htmlFor="name">Name</label>
-                            <input
-                              id="name"
-                              type="text"
-                              name="name"
-                              className="form-control"
-                              value={formData.name}
-                              onChange={handleInputChange}
-                              required
-                            />
+                      <form onSubmit={handleSubmit} className="contact-form" data-aos="fade-up" data-aos-delay="200">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <div className="mb-3">
+                              <label htmlFor="name">Name</label>
+                              <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                className="form-control"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                required
+                              />
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="col-md-6">
-                          <div className="mb-3">
-                            <label htmlFor="email">Email</label>
-                            <input
-                              id="email"
-                              type="email"
-                              name="email"
-                              className="form-control"
-                              value={formData.email}
-                              onChange={handleInputChange}
-                              required
-                            />
+                          <div className="col-md-6">
+                            <div className="mb-3">
+                              <label htmlFor="email">Email</label>
+                              <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                className="form-control"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                              />
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="col-md-6">
-                          <div className="mb-3">
-                            <label htmlFor="subject">Subject</label>
-                            <input
-                              id="subject"
-                              type="text"
-                              name="subject"
-                              className="form-control"
-                              value={formData.subject}
-                              onChange={handleInputChange}
-                              required
-                            />
+                          <div className="col-md-6">
+                            <div className="mb-3">
+                              <label htmlFor="subject">Subject</label>
+                              <input
+                                id="subject"
+                                type="text"
+                                name="subject"
+                                className="form-control"
+                                value={formData.subject}
+                                onChange={handleInputChange}
+                                required
+                              />
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="col-md-6">
-                          <div className="mb-3">
-                            <label htmlFor="phone">Phone Number</label>
-                            <input
-                              id="phone"
-                              type="text"
-                              name="phone"
-                              className={`form-control ${phoneError ? 'is-invalid' : ''}`}
-                              value={formData.phone}
-                              onChange={handleInputChange}
-                              required
-                              maxLength="10"
-                              pattern="[0-9]{10}"
-                              title="Please enter exactly 10 digits"
-                            />
-                            {phoneError && <div className="invalid-feedback">{phoneError}</div>}
+                          <div className="col-md-6">
+                            <div className="mb-3">
+                              <label htmlFor="phone">Phone Number</label>
+                              <input
+                                id="phone"
+                                type="text"
+                                name="phone"
+                                className={`form-control ${phoneError ? 'is-invalid' : ''}`}
+                                value={formData.phone}
+                                onChange={handleInputChange}
+                                required
+                                maxLength="10"
+                                pattern="[0-9]{10}"
+                                title="Please enter exactly 10 digits"
+                              />
+                              {phoneError && <div className="invalid-feedback">{phoneError}</div>}
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="col-md-12">
-                          <div className="mb-3">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                              id="message"
-                              className="form-control"
-                              name="message"
-                              rows="6"
-                              value={formData.message}
-                              onChange={handleInputChange}
-                              required
-                            ></textarea>
+                          <div className="col-md-12">
+                            <div className="mb-3">
+                              <label htmlFor="message">Message</label>
+                              <textarea
+                                id="message"
+                                className="form-control"
+                                name="message"
+                                rows="6"
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                required
+                              ></textarea>
+                            </div>
                           </div>
-                        </div>
 
-                      <div className="col-md-12 captchaBlog">
+                          {/* <div className="col-md-12 captchaBlog">
                       <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
                         onChange={handleCaptchaChange}
                         onExpired={handleCaptchaExpired}
                         onErrored={handleCaptchaExpired}
-                      /></div>
-                    
+                      /></div> */}
 
 
-                        <div className="col-md-12 text-end">
-                          <button className='btn btn-primary' type="submit" disabled={isSubmitting || !formData.captchaToken} style={{ minWidth: '150px' }}>
-                            {isSubmitting ? 'Sending...' : 'Send Message'}
-                          </button>
+
+                          <div className="col-md-12 text-end">
+                            <button
+                              className='btn btn-primary'
+                              type="submit"
+                              disabled={isSubmitting}
+                              style={{ minWidth: '150px' }}
+                            >
+                              {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                    </form>
+                      </form>
                     </div>
 
                   </div>
@@ -349,81 +351,81 @@ export default function ContactUs() {
         </div>
       </section>
 
-     {/* Clients Section */}
-<section id="clients" className="clients section">
-  <div className="container" data-aos="fade-up" data-aos-delay="100">
-    <Swiper
-      loop={true}
-      speed={600}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
-      slidesPerView="auto"
-      pagination={{
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-      }}
-      breakpoints={{
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        },
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 60,
-        },
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 80,
-        },
-        992: {
-          slidesPerView: 5,
-          spaceBetween: 120,
-        },
-      }}
-      modules={[Pagination, Autoplay]}
-      className="init-swiper"
-    >
-      {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
-        const clientLinks = {
-          5: "https://www.hginfra.com/",
-          6: "https://www.natriel.com/",
-          7: "https://hgholdings.in/",
-          1: "https://www.jivocare.com/",
-        };
-        const link = clientLinks[item];
+      {/* Clients Section */}
+      <section id="clients" className="clients section">
+        <div className="container" data-aos="fade-up" data-aos-delay="100">
+          <Swiper
+            loop={true}
+            speed={600}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            slidesPerView="auto"
+            pagination={{
+              el: '.swiper-pagination',
+              type: 'bullets',
+              clickable: true,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+              },
+              480: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+              },
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 80,
+              },
+              992: {
+                slidesPerView: 5,
+                spaceBetween: 120,
+              },
+            }}
+            modules={[Pagination, Autoplay]}
+            className="init-swiper"
+          >
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => {
+              const clientLinks = {
+                5: "https://www.hginfra.com/",
+                6: "https://www.natriel.com/",
+                7: "https://hgholdings.in/",
+                1: "https://www.jivocare.com/",
+              };
+              const link = clientLinks[item];
 
-        return (
-          <SwiperSlide key={item}>
-            {link ? (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={`/assets/images/clients/client-${item}.png`}
-                  className="img-fluid"
-                  alt={`Client ${item}`}
-                  style={{ cursor: "pointer" }}
-                />
-              </a>
-            ) : (
-              <img
-                src={`/assets/images/clients/client-${item}.png`}
-                className="img-fluid"
-                alt={`Client ${item}`}
-              />
-            )}
-          </SwiperSlide>
-        );
-      })}
-      <div className="swiper-pagination"></div>
-    </Swiper>
-  </div>
-</section>
+              return (
+                <SwiperSlide key={item}>
+                  {link ? (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={`/assets/images/clients/client-${item}.png`}
+                        className="img-fluid"
+                        alt={`Client ${item}`}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={`/assets/images/clients/client-${item}.png`}
+                      className="img-fluid"
+                      alt={`Client ${item}`}
+                    />
+                  )}
+                </SwiperSlide>
+              );
+            })}
+            <div className="swiper-pagination"></div>
+          </Swiper>
+        </div>
+      </section>
 
     </>
   );

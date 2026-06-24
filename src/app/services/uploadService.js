@@ -1,7 +1,7 @@
 // services/uploadService.js
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL_PROD_UPLOAD 
+  process.env.NEXT_PUBLIC_API_BASE_URL_DEV 
 
 /**
  * Validate resume file
