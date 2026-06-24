@@ -22,7 +22,7 @@ function ApplyJobForm() {
   const selectedPosition = searchParams.get("position") || "";
   const router = useRouter();
 
-  const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_PROD_UPLOAD;
+  const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_DEV;
 
   const [uploading, setUploading] = useState(false);
   const [resumeUrl, setResumeUrl] = useState("");

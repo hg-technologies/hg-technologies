@@ -26,7 +26,7 @@ export default function ContactUs() {
   const [phoneError, setPhoneError] = useState('');
   // const recaptchaRef = useRef(null);
 
-  const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_PROD;
+  const api_url = process.env.NEXT_PUBLIC_API_BASE_URL_DEV;
 
 
   const handleInputChange = (e) => {
