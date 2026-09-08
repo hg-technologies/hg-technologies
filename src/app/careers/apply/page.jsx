@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ApplyJob from "../../../components/ApplyJob.jsx";
 
 
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function ApplyJobPage() {
-  return <ApplyJob />;
+  return (
+    <Suspense fallback={<p role="status">Loading application form...</p>}>
+      <ApplyJob />
+    </Suspense>
+  );
 }
