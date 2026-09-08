@@ -107,7 +107,7 @@ export default function Careers() {
       </section>
 
       {/* Careers Content */}
-      <section className="contact section contactFromBlog pb-0">
+      {/* <section className="contact section contactFromBlog pb-0">
         <div className="container section-title" data-aos="fade-up" data-aos-delay="100">
           <h2>Career</h2>
           <p>Where Innovation Meets Opportunity</p>
@@ -139,7 +139,7 @@ export default function Careers() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Join Section */}
       <section
@@ -163,7 +163,7 @@ export default function Careers() {
                   communication and consistent performance. Our global reach is strengthened by a workforce that adapts to diverse client needs.
                   Together, we create solutions that are innovative, reliable, and impactful across industries.</p>
 
-                <a className="btn btn-primary mt-3" href="/contact-us">Share Your Requirements</a>
+                <a className="btn btn-primary mt-3" href="https://hgtechnologies-career.peoplestrong.com/" target="_blank">Explore Opportunities</a>
               </div>
             </div>
           </div>
